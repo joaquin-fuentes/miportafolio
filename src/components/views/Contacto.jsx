@@ -6,7 +6,7 @@ import {FiMail} from "react-icons/fi"
 
 const Contacto = () => {
     return (
-        <Container className='text-light p-4 text-center' >
+        <Container className='text-light p-4 text-center' id="contacto" >
             <h3 className=' titulo mb-3'>Contacto</h3>
             <h5 className='mb-4 datoContacto'> <FaWhatsapp className='fs-3 mx-1'></FaWhatsapp>381-6097754</h5>
             <h5 className='mb-4 datoContacto'>< FiMail className='fs-3 mx-1'></FiMail>JOAQUIN.FUENTES1327@GMAIL.COM</h5>

@@ -6,7 +6,7 @@ import {DiJavascript, DiMongodb, DiMysql} from "react-icons/di"
 
 const Conocimientos = () => {
     return (
-        <Container className='py-4'>
+        <Container className='py-4' id="conocimientos">
             <h3 className='text-center text-light titulo mb-3'>Conocimientos</h3>
             <Row className='text-light d-flex justify-content-center'>
                 <Col xs={8} md={4} className='text-center'>

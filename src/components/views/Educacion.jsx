@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 const Educacion = () => {
     return (
-        <Container className='text-light text-center p-4' >
+        <Container className='text-light text-center p-4' id="educacion" >
             <h3 className=' titulo mb-3'>Educación</h3>
             <h5 className='fw-bold'>Universidad Tecnologica Nacional - FRT</h5>
             <h6>Tecnicatura Universitaria en Programacion</h6>
