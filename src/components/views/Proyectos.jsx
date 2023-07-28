@@ -28,7 +28,7 @@ const Proyectos = () => {
                 </Col>
 
             </Row>
-            <Button variant='warning' className='my-4'>GITHUB</Button>
+             <a href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto btn btn-warning text-dark my-4 '>GITHUB</a>
         </Container>
     );
 };
