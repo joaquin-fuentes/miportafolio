@@ -67,6 +67,14 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* contacto */
+.datoContacto{
+  color: white;
+  font-weight: 600;
+  font-size: 15x;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
 
 @media (max-width: 576px) {
   .portada {
