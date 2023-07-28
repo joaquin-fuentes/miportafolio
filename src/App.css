@@ -1,0 +1,68 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.text-hover:hover {
+  color: rgb(169, 169, 169) !important;
+}
+
+/* PORTADA */
+.portada {
+  background: linear-gradient(to right, #0201160c, #55590063), url(https://profile.es/wp-content/media/mejores-frameworks-de-java-en-2021-1024x478.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 100px;
+}
+
+.img-portada {
+  box-shadow: 2px 2px 2px black;
+}
+
+.contenedor-textoPortada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contenedor-imagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-nombre {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.71);
+}
+
+.text-puesto {
+  color: rgb(196, 196, 196);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.71);
+}
+
+/* SOBRE MI Y TRABAJO */
+.titulo{
+  text-decoration: underline yellow;
+}
+/* CONOCIMIENTOS */
+.icono{
+  font-size: 60px;
+}
+
+@media (max-width: 576px) {
+  .portada {
+    padding: 60px;
+  }
+  .img-portada{
+    height: 300;
+    margin-bottom: 30px;
+  }
+}
