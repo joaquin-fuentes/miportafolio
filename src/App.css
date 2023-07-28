@@ -56,6 +56,17 @@
 .icono{
   font-size: 60px;
 }
+.tarjetaConocimiento{
+  height: 120px; /* Ajusta la altura deseada según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 @media (max-width: 576px) {
   .portada {
@@ -64,5 +75,8 @@
   .img-portada{
     height: 300;
     margin-bottom: 30px;
+  }
+  .datoContacto{
+    font-size: 14px;
   }
 }

@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Menu></Menu>
-      <div className='main bg-dark'>
+      <div className='main bg-dark m-0'>
         <Portada></Portada>
         <Container className='my-4'>
           <Row>
@@ -39,9 +39,6 @@ function App() {
           <Proyectos></Proyectos>
 
         </Container>
-
-
-
       </div>
       <Footer></Footer>
     </>
