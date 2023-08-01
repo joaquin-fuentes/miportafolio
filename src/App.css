@@ -100,6 +100,12 @@
 .linkProyectoGithub:hover{
   color: yellow;
 }
+.cardProyectos{
+  height: 250px;
+}
+.cardProyectos img{
+  height: 65%;
+}
 
 @media (max-width: 576px) {
   .portada {
