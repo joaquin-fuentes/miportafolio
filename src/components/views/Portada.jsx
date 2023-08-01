@@ -4,7 +4,7 @@ import imgPerfil from "../../assets/20210426_1313411.jpg"
 
 const Portada = () => {
     return (
-        <Container fluid="xs" >
+        <Container fluid="xs" id='home' >
             <Row className="portada m-0">
                 <Col xs={12} md={6} className='contenedor-imagen  '>
                     <img src={imgPerfil} alt="Imagen de perfil de Joaquin Fuentes" className='w-100 rounded-circle img-portada' />

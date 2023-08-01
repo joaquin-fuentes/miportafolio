@@ -1,11 +1,13 @@
 import React from 'react';
 import { Container, Navbar, Nav } from "react-bootstrap"
+import logoOscuro from "../../assets/logoFavicon.png"
 
 const Menu = () => {
     return (
-        <Navbar expand="lg" className="bg-dark">
+        <Navbar expand="lg" className="bg-dark navBar">
             <Container>
-                <Navbar.Brand href="#home" className='text-light fw-bold'>¡Bienvenido!</Navbar.Brand>
+                <Navbar.Brand href="#home" className='text-light fw-bold'> 
+                <img src={logoOscuro} alt="Logo joaquin fuentes" className='logoMenu rounded me-1' /> ¡Bienvenido!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-secondary' />
                 <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="ms-auto">
