@@ -23,6 +23,10 @@
   right: 0;
   z-index: 100;
 }
+#home{
+  margin-top: 76px;
+  height: 100%;
+}
 /* PORTADA */
 .portada {
   background: linear-gradient(to right, #0201160c, #55590063), url(https://profile.es/wp-content/media/mejores-frameworks-de-java-en-2021-1024x478.jpg);
@@ -30,7 +34,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 100px;
+  padding: 80px;
+  height: 90vh;
 }
 
 .img-portada {
@@ -97,5 +102,8 @@
   }
   .datoContacto{
     font-size: 14px;
+  }
+  .articleInfo{
+    margin-bottom: auto;
   }
 }
