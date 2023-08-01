@@ -5,7 +5,7 @@
 
 ## Sitio Web 💻
 
-Link al sitio : https://portafolio-joaquinfuentes.netlify.app/
+Link al sitio : https://joaquin-fuentes.github.io/miportafolio/
 
 
 
