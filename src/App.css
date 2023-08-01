@@ -121,4 +121,10 @@
   .articleInfo{
     margin-bottom: auto;
   }
+  .cardProyectos{
+    height: 200px;
+  }
+  .cardProyectos img{
+    height: 62%;
+  }
 }
