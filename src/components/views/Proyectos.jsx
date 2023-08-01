@@ -22,16 +22,6 @@ const Proyectos = () => {
                         <a href="https://github.com/joaquin-fuentes/recetascliente" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
                     </article>
                 </Col>
-                <Col xs={11} md={4} className='text-center'>
-                    <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <h4>PRoyecto 3</h4>
-                    </article>
-                </Col>
-                <Col xs={11} md={4} className='text-center'>
-                    <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <h4>PRoyecto 4</h4>
-                    </article>
-                </Col>
 
             </Row>
              <a href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto btn btn-warning text-dark my-4 '>GITHUB</a>
