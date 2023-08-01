@@ -5,7 +5,7 @@
 
 ## Sitio Web 💻
 
-Link de netlify : [https://bondia-restaurant.netlify.app/](https://portafolio-joaquinfuentes.netlify.app/)
+Link al sitio : https://portafolio-joaquinfuentes.netlify.app/
 
 
 
