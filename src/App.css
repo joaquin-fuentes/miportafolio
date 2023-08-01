@@ -91,6 +91,15 @@
   text-decoration: none;
   margin-bottom: 30px;
 }
+/* Proyectos */
+.linkProyectoGithub{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.linkProyectoGithub:hover{
+  color: yellow;
+}
 
 @media (max-width: 576px) {
   .portada {

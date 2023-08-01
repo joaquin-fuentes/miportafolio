@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap"
+import portadaPortafolio from "../../assets/portadaPortafolio.png"
 
 const Proyectos = () => {
     return (
@@ -8,7 +9,9 @@ const Proyectos = () => {
             <Row className='text-light d-flex justify-content-center'>
                 <Col xs={8} md={4} className='text-center'>
                     <article className='rounded bg-secondary m-3 p-2'>
-                        <h4>PRoyecto 1</h4>
+                        <img src={portadaPortafolio} alt=" imagen proyecto portafolio" width="100%" className='rounded' />
+                        <h4 className='mt-2'>Mi portafolio</h4>
+                        <a href="https://github.com/joaquin-fuentes/nuevoportafolio" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
                     </article>
                 </Col>
                 <Col xs={8} md={4} className='text-center'>
