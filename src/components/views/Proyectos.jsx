@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap"
 import portadaPortafolio from "../../assets/portadaPortafolio.png"
 import portadaRecetas from "../../assets/portadaRecetas.png"
+import portadaTiendaAnime from "../../assets/tiendaAnime.png"
 
 const Proyectos = () => {
     return (
@@ -16,15 +17,22 @@ const Proyectos = () => {
                     </article>
                 </Col>
                 <Col xs={11} md={4} className='text-center'>
-                <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
+                    <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
                         <img src={portadaRecetas} alt=" imagen proyecto recetas de cocina" width="100%" className='rounded' />
                         <h4 className='mt-2'>Recetas de cocina</h4>
                         <a href="https://github.com/joaquin-fuentes/recetascliente" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
                     </article>
                 </Col>
+                <Col xs={11} md={4} className='text-center'>
+                    <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
+                        <img src={portadaTiendaAnime} alt=" imagen proyecto tienda anime" width="100%" className='rounded' />
+                        <h4 className='mt-2'>Tienda de anime</h4>
+                        <a href="https://github.com/joaquin-fuentes/proyecto-final-modulo-2" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                    </article>
+                </Col>
 
             </Row>
-             <a href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto btn btn-warning text-dark my-4 '>GITHUB</a>
+            <a href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto btn btn-warning text-dark my-4 '>GITHUB</a>
         </Container>
     );
 };
