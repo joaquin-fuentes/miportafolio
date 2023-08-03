@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap"
 import portadaPortafolio from "../../assets/portadaPortafolio.png"
 import portadaRecetas from "../../assets/portadaRecetas.png"
 import portadaTiendaAnime from "../../assets/tiendaAnime.png"
+import portadaStreaming from "../../assets/portadaStreaming.png"
 
 const Proyectos = () => {
     return (
@@ -28,6 +29,13 @@ const Proyectos = () => {
                         <img src={portadaTiendaAnime} alt=" imagen proyecto tienda anime" width="100%" className='rounded' />
                         <h4 className='mt-2'>Tienda de anime</h4>
                         <a href="https://github.com/joaquin-fuentes/proyecto-final-modulo-2" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                    </article>
+                </Col>
+                 <Col xs={11} md={5} lg={4} className='text-center'>
+                    <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
+                        <img src={portadaStreaming} alt=" imagen proyecto rolling tv" width="100%" className='rounded' />
+                        <h4 className='mt-2'>Streaming de peliculas </h4>
+                        <a href="https://github.com/joaquin-fuentes/rollingtv" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
                     </article>
                 </Col>
 
