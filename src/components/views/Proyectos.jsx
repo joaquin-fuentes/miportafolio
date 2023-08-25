@@ -4,6 +4,8 @@ import portadaPortafolio from "../../assets/portadaPortafolio.png"
 import portadaRecetas from "../../assets/portadaRecetas.png"
 import portadaTiendaAnime from "../../assets/tiendaAnime.png"
 import portadaStreaming from "../../assets/portadaStreaming.png"
+import portadaBonDia from "../../assets/portadaBonDia.png"
+
 
 const Proyectos = () => {
     return (
@@ -36,6 +38,13 @@ const Proyectos = () => {
                         <img src={portadaStreaming} alt=" imagen proyecto rolling tv" width="100%" className='rounded' />
                         <h4 className='mt-2'>Streaming de peliculas </h4>
                         <a href="https://github.com/joaquin-fuentes/rollingtv" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                    </article>
+                </Col>
+                 <Col xs={11} md={5} lg={4} className='text-center'>
+                    <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
+                        <img src={portadaBonDia} alt=" imagen proyecto bon dia" width="100%" className='rounded' />
+                        <h4 className='mt-2'>Pedidos para restaurante </h4>
+                        <a href="https://github.com/joaquin-fuentes/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
                     </article>
                 </Col>
 

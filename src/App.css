@@ -123,9 +123,13 @@
     margin-bottom: auto;
   }
   .cardProyectos{
-    height: 200px;
+    height: auto;
   }
   .cardProyectos img{
-    height: 62%;
+   height: 110px;
+  }
+  .cardProyectos h4{
+    font-size: 18px;
+    font-weight: bold;
   }
 }
