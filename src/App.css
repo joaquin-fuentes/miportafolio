@@ -107,6 +107,16 @@
   height: 65%;
 }
 
+/* Educacion */
+.carousel .carousel-indicators button{
+  background-color: black;
+}
+.carousel-control-next-icon{
+  background-color: black;
+}
+.carousel-control-prev-icon{
+  background-color: black;
+}
 
 @media (max-width: 576px) {
   .portada {
