@@ -9,7 +9,7 @@ const Contacto = () => {
     return (
         <Container className='text-light p-4 text-center d-flex flex-column' id="contacto" >
             <h3 className=' titulo mb-4'>Contacto</h3>
-            <a href={url} className='datoContacto'> <FaWhatsapp className='fs-3 mx-1'></FaWhatsapp>381-6097754</a>
+            <a href={url} target='_blank' className='datoContacto'> <FaWhatsapp className='fs-3 mx-1'></FaWhatsapp>381-6097754</a>
             <h5 className='datoContacto'>< FiMail className='fs-3 mx-1'></FiMail>JOAQUIN.FUENTES1327@GMAIL.COM</h5>
             <a href='https://www.linkedin.com/in/joaqu%C3%ADn-fuentes/' target='_blank' className=' datoContacto '> <FaLinkedin className='fs-3 mx-1'></FaLinkedin>Perfil de LINKEDIN</a>
             <a href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto '> <FaGithub className='fs-3 mx-1'></FaGithub>Perfil de GITHUB</a>
