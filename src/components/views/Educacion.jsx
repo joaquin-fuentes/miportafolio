@@ -4,34 +4,34 @@ import { Container, Button, Modal, Carousel } from 'react-bootstrap';
 import CarouselCertificados from "./CarouselCertificados"
 
 
- function MyVerticallyCenteredModal(props) {
-     return (
-         <Modal
-             {...props}
-             size="lg"
-             aria-labelledby="contained-modal-title-vcenter"
-             centered
-         >
-             <Modal.Header closeButton>
-                 <Modal.Title id="contained-modal-title-vcenter">
-                     CERTIFICADOS 
-                 </Modal.Title>
-             </Modal.Header>
-             <Modal.Body>
+function MyVerticallyCenteredModal(props) {
+    return (
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    CERTIFICADOS
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
                 <CarouselCertificados></CarouselCertificados>
-             </Modal.Body>
-             <Modal.Footer>
-                 <Button onClick={props.onHide}>Volver</Button>
-             </Modal.Footer>
-         </Modal>
-     );
- }
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={props.onHide}>Volver</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+}
 
 
 
 const Educacion = () => {
     const [modalShow, setModalShow] = React.useState(false);
-    
+
 
     return (
         <Container className='text-light text-center p-4' id="educacion" >

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Navbar, Nav } from "react-bootstrap"
-import logoOscuro from "../../assets/logoFavicon.png"
+import logoOscuro from "../../assets/logo1.png"
 
 const Menu = () => {
     return (
-        <Navbar expand="lg" className="bg-dark navBar">
+        <Navbar expand="lg" className="navBar">
             <Container>
                 <Navbar.Brand href="#home" className='text-light fw-bold'> 
                 <img src={logoOscuro} alt="Logo joaquin fuentes" className='logoMenu rounded me-1' /> ¡Bienvenido!</Navbar.Brand>

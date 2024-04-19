@@ -22,24 +22,26 @@
   left: 0;
   right: 0;
   z-index: 100;
+  background-color: rgba(69, 69, 69, 0.195);
 }
 #home{
-  margin-top: 76px;
   height: 100%;
 }
 /* PORTADA */
 .portada {
-  background: linear-gradient(to right, #0201160c, #55590063), url(https://profile.es/wp-content/media/mejores-frameworks-de-java-en-2021-1024x478.jpg);
+  background: linear-gradient(to right, #0201160c, #55590063), url("./assets/fondop5.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding: 80px;
-  height: 90vh;
+  height: 100vh;
 }
 
 .img-portada {
   box-shadow: 2px 2px 2px black;
+  opacity: 0.92;
+  margin-top: 35px;
 }
 
 .contenedor-textoPortada {
