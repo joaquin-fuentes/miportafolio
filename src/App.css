@@ -38,7 +38,7 @@
 }
 /* PORTADA */
 .portada {
-  background: linear-gradient(to right, #0201160c, #55590063), url("./assets/fondop5.jpg");
+  background: linear-gradient(to right, #020116d9, #72736963), url("./assets/fondop1.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
