@@ -10,7 +10,7 @@ const Menu = () => {
                 <img src={logoOscuro} alt="Logo joaquin fuentes" className='logoMenu rounded me-1' /> ¡Bienvenido!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-secondary' />
                 <Navbar.Collapse id="basic-navbar-nav" >
-                    <Nav className="ms-auto">
+                    <Nav className="ms-auto contenedorEnlacesNav">
                         <Nav.Link className="text-light text-hover" href="#sobremi">Sobre mí</Nav.Link>
                         <Nav.Link className="text-light text-hover" href="#experiencia">Experiencia</Nav.Link>
                         <Nav.Link className="text-light text-hover" href="#conocimientos">Conocimientos</Nav.Link>
