@@ -12,7 +12,7 @@ const Portada = () => {
                 <Col lg={6} className='contenedor-textoPortada  '>
                     <article className='articleInfo'>
                         <h1 className='text-light fw-bold text-nombre'>Joaquín Fuentes</h1>
-                        <h3 className='text-puesto'>Desarrollador Web Full Stack</h3>
+                        <h2 className='text-puesto'>Desarrollador Web Full Stack</h2>
                     </article>
                 </Col>
             </Row>

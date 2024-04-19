@@ -10,7 +10,7 @@ import portadaBonDia from "../../assets/portadaBonDia.png"
 const Proyectos = () => {
     return (
         <Container className='py-4 text-center' id="proyectos">
-            <h3 className='text-center text-light titulo mb-3'>Proyectos</h3>
+            <h2 className='text-center text-light titulo mb-3'>Proyectos</h2>
             <Row className='text-light d-flex justify-content-center'>
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article className='rounded bg-secondary m-3 p-2 cardProyectos'>
