@@ -30,7 +30,7 @@ const SobreMi = () => {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
-        <Container className='text-light p-4 text-center' id='sobremi' >
+        <Container data-aos="fade-up" className='text-light p-4 text-center' id='sobremi' >
             <h2 className='text-center titulo mb-3'>Sobre mí</h2>
             <h4>¿Quién soy?</h4>
             <h6>Hola! Mi nombre es Joaquin Fuentes! Tengo 30 años. Me considero un joven apasionado de la tecnologica y la programacion. <br />

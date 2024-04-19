@@ -3,7 +3,7 @@ import { Container, Button } from 'react-bootstrap';
 
 const Trabajo = () => {
     return (
-        <Container className='text-light p-4' id='experiencia'>
+        <Container data-aos="fade-up" className='text-light p-4' id='experiencia'>
             <h2 className='text-center titulo mb-3'>Trabajo</h2>
             <h4 className='fw-bold text-center'>RollingCode</h4>
             <h6 className='text-center mb-3'>Tutor en curso de Desarrollo Web</h6>

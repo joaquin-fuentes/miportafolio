@@ -34,9 +34,9 @@ const Educacion = () => {
 
 
     return (
-        <Container className='text-light text-center p-4' id="educacion" >
+        <Container data-aos="fade-up" className='text-light text-center p-4' id="educacion" >
             <h2 className=' titulo mb-4'>Educación</h2>
-            <h4 className='fw-bold'>Universidad Tecnologica Nacional - FRT</h4>
+            <h4 className='fw-bold'>Universidad Tecnologica Nacional-FRT</h4>
             <h6>Tecnicatura Universitaria en Programacion</h6>
             <br />
             <h4 className='fw-bold'>RollingCode</h4>

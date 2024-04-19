@@ -7,7 +7,7 @@ const url = `https://api.whatsapp.com/send?phone=${3816097754}&text=${encodeURIC
 
 const Contacto = () => {
     return (
-        <Container className='text-light p-4 text-center d-flex flex-column' id="contacto" >
+        <Container data-aos="fade-up" className='text-light p-4 text-center d-flex flex-column' id="contacto" >
             <h2 className=' titulo mb-4'>Contacto</h2>
             <a href={url} target='_blank' className='datoContacto'> <FaWhatsapp className='fs-3 mx-1'></FaWhatsapp>381-6097754</a>
             <h5 className='datoContacto'>< FiMail className='fs-3 mx-1'></FiMail>JOAQUIN.FUENTES1327@GMAIL.COM</h5>
