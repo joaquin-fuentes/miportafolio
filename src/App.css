@@ -12,11 +12,11 @@
   color: rgb(169, 169, 169) !important;
 }
 
-.logoMenu{
+.logoMenu {
   width: 55px;
   height: 50px;
 }
-.navBar{
+.navBar {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,21 +24,21 @@
   z-index: 100;
   background-color: rgba(69, 69, 69, 0.195);
 }
-#home{
+#home {
   height: 100%;
 }
 /* Media Query para pantallas más pequeñas, como celulares y tablets */
 @media only screen and (max-width: 768px) {
-
-  .contenedorEnlacesNav{
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-    }
+  .contenedorEnlacesNav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 }
 /* PORTADA */
 .portada {
-  background: linear-gradient(to right, #020116d9, #72736963), url("./assets/fondop1.jpg");
+  background: linear-gradient(to right, #020116d9, #72736963),
+    url("./assets/fondop1.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@
 
 .img-portada {
   box-shadow: 2px 2px 2px black;
-  opacity: 0.93!important;
+  opacity: 0.93 !important;
   margin-top: 35px;
 }
 
@@ -59,7 +59,7 @@
   align-items: center;
   text-align: center;
 }
-.contenedor-imagen{
+.contenedor-imagen {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,14 +76,14 @@
 }
 
 /* SOBRE MI Y TRABAJO */
-.titulo{
+.titulo {
   text-decoration: underline yellow;
 }
 /* CONOCIMIENTOS */
-.icono{
+.icono {
   font-size: 60px;
 }
-.tarjetaConocimiento{
+.tarjetaConocimiento {
   height: 120px; /* Ajusta la altura deseada según tus necesidades */
   display: flex;
   flex-direction: column;
@@ -95,7 +95,7 @@
   white-space: nowrap;
 }
 /* contacto */
-.datoContacto{
+.datoContacto {
   color: white;
   font-weight: 600;
   font-size: 15x;
@@ -103,29 +103,32 @@
   margin-bottom: 30px;
 }
 /* Proyectos */
-.linkProyectoGithub{
+.linkProyectoGithub {
   color: white;
   text-decoration: none;
   font-weight: 600;
 }
-.linkProyectoGithub:hover{
+.linkProyectoGithub:hover {
   color: yellow;
 }
-.cardProyectos{
+.cardProyectos {
   height: 250px;
 }
-.cardProyectos img{
+.cardProyectos img {
   height: 65%;
+}
+.nombreProyecto {
+  font-size: 1.3rem!important;
 }
 
 /* Educacion */
-.carousel .carousel-indicators button{
+.carousel .carousel-indicators button {
   background-color: black;
 }
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   background-color: black;
 }
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
   background-color: black;
 }
 
@@ -133,23 +136,23 @@
   .portada {
     padding: 60px;
   }
-  .img-portada{
+  .img-portada {
     height: 300;
     margin-bottom: 30px;
   }
-  .datoContacto{
+  .datoContacto {
     font-size: 14px;
   }
-  .articleInfo{
+  .articleInfo {
     margin-bottom: auto;
   }
-  .cardProyectos{
+  .cardProyectos {
     height: auto;
   }
-  .cardProyectos img{
-   height: 110px;
+  .cardProyectos img {
+    height: 110px;
   }
-  .cardProyectos h4{
+  .cardProyectos h4 {
     font-size: 18px;
     font-weight: bold;
   }

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap"
-import portadaPortafolio from "../../assets/portadaPortafolio.png"
-import portadaRecetas from "../../assets/portadaRecetas.png"
-import portadaTiendaAnime from "../../assets/tiendaAnime.png"
-import portadaStreaming from "../../assets/portadaStreaming.png"
-import portadaBonDia from "../../assets/portadaBonDia.png"
+import portadaPortafolio from "../../assets/portadamiportafolio.png"
+import portadaRecetas from "../../assets/portadatkc.png"
+import portadaTiendaAnime from "../../assets/portadalj.png"
+import portadaStreaming from "../../assets/portadabondia.png"
 
 
 const Proyectos = () => {
@@ -15,36 +14,45 @@ const Proyectos = () => {
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
                         <img src={portadaPortafolio} alt=" imagen proyecto portafolio" width="100%" className='rounded' />
-                        <h4 className='mt-2'>Mi portafolio</h4>
-                        <a href="https://github.com/joaquin-fuentes/nuevoportafolio" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                        <h4 className='mt-2 nombreProyecto'>Mi portafolio</h4>
+                        <div className=''>
+                            <a href="https://github.com/joaquin-fuentes/nuevoportafolio" target='_blank' className='linkProyectoGithub'>  Github</a>
+                            <span> - </span>
+                            <a href="https://joaquin-fuentes.github.io/miportafolio/" target='_blank' className='linkProyectoGithub'>Página web</a>
+                        </div>
                     </article>
                 </Col>
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaRecetas} alt=" imagen proyecto recetas de cocina" width="100%" className='rounded' />
-                        <h4 className='mt-2'>Recetas de cocina</h4>
-                        <a href="https://github.com/joaquin-fuentes/recetascliente" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                        <img src={portadaRecetas} alt=" imagen proyecto Tucuman Kayak Club" width="100%" className='rounded' />
+                        <h4 className='mt-2 nombreProyecto'>Tucumán Kayak Club</h4>
+                        <div className=''>
+                            <a href="https://github.com/joaquin-fuentes/TKC-Front" target='_blank' className='linkProyectoGithub'>  Github</a>
+                            <span> - </span>
+                            <a href="https://tucumankayakclub.netlify.app" target='_blank' className='linkProyectoGithub'>Página web</a>
+                        </div>
                     </article>
                 </Col>
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaTiendaAnime} alt=" imagen proyecto tienda anime" width="100%" className='rounded' />
-                        <h4 className='mt-2'>Tienda de anime</h4>
-                        <a href="https://github.com/joaquin-fuentes/proyecto-final-modulo-2" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                        <img src={portadaTiendaAnime} alt=" imagen proyecto lj indumentaria" width="100%" className='rounded' />
+                        <h4 className='mt-2 nombreProyecto'>LJ Indumentaria</h4>
+                        <div className=''>
+                            <a href="https://github.com/joaquin-fuentes/leo-indumentaria" target='_blank' className='linkProyectoGithub'>  Github</a>
+                            <span> - </span>
+                            <a href="https://lj-indumentaria.netlify.app" target='_blank' className='linkProyectoGithub'>Página web</a>
+                        </div>
                     </article>
                 </Col>
-                 <Col xs={11} md={5} lg={4} className='text-center'>
+                <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaStreaming} alt=" imagen proyecto rolling tv" width="100%" className='rounded' />
-                        <h4 className='mt-2'>Streaming de peliculas </h4>
-                        <a href="https://github.com/joaquin-fuentes/rollingtv" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
-                    </article>
-                </Col>
-                 <Col xs={11} md={5} lg={4} className='text-center'>
-                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaBonDia} alt=" imagen proyecto bon dia" width="100%" className='rounded' />
-                        <h4 className='mt-2'>Pedidos para restaurante </h4>
-                        <a href="https://github.com/joaquin-fuentes/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>Ver Repositorio de Github</a>
+                        <img src={portadaStreaming} alt=" imagen proyecto bom dia" width="100%" className='rounded' />
+                        <h4 className='mt-2 nombreProyecto'>Bon Dia </h4>
+                        <div className=''>
+                            <a href="https://github.com/joaquin-fuentes/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>  Github</a>
+                            <span> - </span>
+                            <a href="https://bondia-restaurant.netlify.app/" target='_blank' className='linkProyectoGithub'>Página web</a>
+                        </div>
                     </article>
                 </Col>
 
