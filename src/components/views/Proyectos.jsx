@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap"
 import portadaPortafolio from "../../assets/portadamiportafolio.png"
 import portadaTKC from "../../assets/portadatkc.png"
 import portadaLJ from "../../assets/portadalj.png"
-import portadaBonDia from "../../assets/portadabondia.png"
+import portadaBonDia from "../../assets/portadaproyectogrupal.png"
 
 // import portadaBonDia from "../../assets/portadabondia.png"
 
