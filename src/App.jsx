@@ -10,6 +10,7 @@ import Conocimientos from './components/views/Conocimientos';
 import Contacto from './components/views/Contacto';
 import Educacion from './components/views/Educacion';
 import Proyectos from './components/views/Proyectos';
+import FormularioContacto from './components/views/FormularioContacto';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
             </Col>
           </Row>
           <Proyectos></Proyectos>
-
+          <FormularioContacto></FormularioContacto>
         </Container>
       </div>
       <Footer></Footer>

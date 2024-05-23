@@ -118,7 +118,7 @@
   height: 65%;
 }
 .nombreProyecto {
-  font-size: 1.3rem!important;
+  font-size: 1.3rem !important;
 }
 
 /* Educacion */
@@ -130,6 +130,17 @@
 }
 .carousel-control-prev-icon {
   background-color: black;
+}
+
+/* Fomrulario de Contacto */
+.iconoForm{
+  margin-bottom: 1px;
+}
+.btnForm{
+  width: 25%;
+}
+.contenedorFooter{
+  padding-top: 100px!important;
 }
 
 @media (max-width: 576px) {
@@ -155,5 +166,8 @@
   .cardProyectos h4 {
     font-size: 18px;
     font-weight: bold;
+  }
+  .btnForm{
+    width: 50%;
   }
 }
