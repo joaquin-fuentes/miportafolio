@@ -3,6 +3,8 @@ import { Container, Row, Col, Button } from "react-bootstrap"
 import portadaPortafolio from "../../assets/portadamiportafolio.png"
 import portadaTKC from "../../assets/portadatkc.png"
 import portadaLJ from "../../assets/portadalj.png"
+import portadaBonDia from "../../assets/portadabondia.png"
+
 // import portadaBonDia from "../../assets/portadabondia.png"
 
 const Proyectos = () => {
@@ -40,6 +42,17 @@ const Proyectos = () => {
                             <a href="https://github.com/joaquin-fuentes/leo-indumentaria" target='_blank' className='linkProyectoGithub'>  Github</a>
                             <span> - </span>
                             <a href="https://lj-indumentaria.netlify.app" target='_blank' className='linkProyectoGithub'>Página web</a>
+                        </div>
+                    </article>
+                </Col>
+                <Col xs={11} md={5} lg={4} className='text-center'>
+                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
+                        <img src={portadaBonDia} alt=" imagen proyecto Bon Dia" width="100%" className='rounded' />
+                        <h4 className='mt-2 nombreProyecto'>Bon Dia</h4>
+                        <div className=''>
+                            <a href="https://github.com/MauroDiazSantilli/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>  Github</a>
+                            <span> - </span>
+                            <a href="https://bondia-restaurant.netlify.app/" target='_blank' className='linkProyectoGithub'>Página web</a>
                         </div>
                     </article>
                 </Col>
