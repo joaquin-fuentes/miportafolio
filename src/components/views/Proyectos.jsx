@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap"
 import portadaPortafolio from "../../assets/portadamiportafolio.png"
-import portadaRecetas from "../../assets/portadatkc.png"
-import portadaTiendaAnime from "../../assets/portadalj.png"
-import portadaStreaming from "../../assets/portadabondia.png"
+import portadaTKC from "../../assets/portadatkc.png"
+import portadaLJ from "../../assets/portadalj.png"
+import portadaBonDia from "../../assets/portadabondia.png"
 
 
 const Proyectos = () => {
@@ -24,7 +24,7 @@ const Proyectos = () => {
                 </Col>
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaRecetas} alt=" imagen proyecto Tucuman Kayak Club" width="100%" className='rounded' />
+                        <img src={portadaTKC} alt=" imagen proyecto Tucuman Kayak Club" width="100%" className='rounded' />
                         <h4 className='mt-2 nombreProyecto'>Tucumán Kayak Club</h4>
                         <div className=''>
                             <a href="https://github.com/joaquin-fuentes/TKC-Front" target='_blank' className='linkProyectoGithub'>  Github</a>
@@ -35,7 +35,7 @@ const Proyectos = () => {
                 </Col>
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaTiendaAnime} alt=" imagen proyecto lj indumentaria" width="100%" className='rounded' />
+                        <img src={portadaLJ} alt=" imagen proyecto lj indumentaria" width="100%" className='rounded' />
                         <h4 className='mt-2 nombreProyecto'>LJ Indumentaria</h4>
                         <div className=''>
                             <a href="https://github.com/joaquin-fuentes/leo-indumentaria" target='_blank' className='linkProyectoGithub'>  Github</a>
@@ -46,7 +46,7 @@ const Proyectos = () => {
                 </Col>
                 <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaStreaming} alt=" imagen proyecto bom dia" width="100%" className='rounded' />
+                        <img src={portadaBonDia} alt=" imagen proyecto bom dia" width="100%" className='rounded' />
                         <h4 className='mt-2 nombreProyecto'>Bon Dia </h4>
                         <div className=''>
                             <a href="https://github.com/joaquin-fuentes/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>  Github</a>
