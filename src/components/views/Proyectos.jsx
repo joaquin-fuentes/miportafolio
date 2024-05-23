@@ -5,7 +5,6 @@ import portadaTKC from "../../assets/portadatkc.png"
 import portadaLJ from "../../assets/portadalj.png"
 import portadaBonDia from "../../assets/portadabondia.png"
 
-
 const Proyectos = () => {
     return (
         <Container className='py-4 text-center' id="proyectos">
