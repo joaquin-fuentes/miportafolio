@@ -12,7 +12,7 @@
 .text-hover:hover {
   color: rgb(169, 169, 169) !important;
 }
-
+/* Menu.css */
 .logoMenu {
   width: 55px;
   height: 50px;
@@ -24,7 +24,40 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(69, 69, 69, 0.195);
+  transition: background-color 0.3s ease;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Fondo semi-transparente por defecto */
+}
+
+.navBar.scrolled {
+  background-color: rgba(0,0,0,0.7); /* Fondo más oscuro cuando se hace scroll */
+}
+
+.navbarToggle {
+  /* Corregido */
+  border: none !important;
+  box-shadow: none !important; /* Elimina la sombra */
+}
+
+.transitionMenu {
+  transition: all 0.8s ease-in-out; /* Transición suave de 0.3 segundos */
+  filter: drop-shadow(0.5px 0.5px white);
+}
+
+.menuHamburguesaCerrado {
+  font-size: 35px !important;
+  color: #062243;
+  opacity: 1; /* Comienza completamente visible */
+}
+
+.menuHamburguesaAbierto {
+  font-size: 35px !important;
+  color: #062243;
+  opacity: 1; /* Comienza completamente visible */
 }
 #home {
   height: 100%;
@@ -75,7 +108,7 @@
   color: rgb(196, 196, 196);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.71);
 }
-code{
+code {
   text-align: start;
 }
 pre {
