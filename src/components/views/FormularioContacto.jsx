@@ -42,7 +42,7 @@ const FormularioContacto = () => {
 
     return (
         <div className="text-light d-flex justify-content-center flex-column align-items-center mt-4"> 
-            <h2 data-aos="fade-up"  className='text-center titulo mb-3'>Déjame tu mensaje, comentario o feedback</h2>
+            <h2 data-aos="fade-up"  className='text-center titulo mb-3'>Déjame tu mensaje o feedback</h2>
             <form data-aos="fade-up"  onSubmit={handleSubmit} className='w-75 row'>
                 <div className='col-12 col-md-6 mt-3'>
                     <label className='form-label' htmlFor="name"><RiContactsFill className='iconoForm'></RiContactsFill> Nombre</label>
