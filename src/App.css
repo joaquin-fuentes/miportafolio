@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Fira Code", monospace;
 }
 
 .main {
@@ -74,7 +75,12 @@
   color: rgb(196, 196, 196);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.71);
 }
-
+code{
+  text-align: start;
+}
+pre {
+  color: #dcdfe4d8;
+}
 /* SOBRE MI Y TRABAJO */
 .titulo {
   text-decoration: underline yellow;
@@ -133,14 +139,14 @@
 }
 
 /* Fomrulario de Contacto */
-.iconoForm{
+.iconoForm {
   margin-bottom: 1px;
 }
-.btnForm{
+.btnForm {
   width: 25%;
 }
-.contenedorFooter{
-  padding-top: 100px!important;
+.contenedorFooter {
+  padding-top: 100px !important;
 }
 
 @media (max-width: 576px) {
@@ -149,7 +155,7 @@
   }
   .img-portada {
     height: 300;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   .datoContacto {
     font-size: 14px;
@@ -167,7 +173,7 @@
     font-size: 18px;
     font-weight: bold;
   }
-  .btnForm{
+  .btnForm {
     width: 50%;
   }
 }

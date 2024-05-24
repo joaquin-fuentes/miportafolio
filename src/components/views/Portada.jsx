@@ -1,8 +1,9 @@
-import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import imgPerfil from "../../assets/sinfondo.png"
 
 const Portada = () => {
+
+
     return (
         <Container fluid="xs" id='home' >
             <Row className="portada m-0">
@@ -13,6 +14,13 @@ const Portada = () => {
                     <article data-aos="fade-up" className='articleInfo'>
                         <h1 className='text-light fw-bold text-nombre'>Joaquín Fuentes</h1>
                         <h2 className='text-puesto'>Desarrollador Web Full Stack</h2>
+                        <pre className=''>
+                            <code className=''>
+                                {`const saludar =()=>console.log("Hola Mundo!")
+saludar()`
+                                }
+                            </code>
+                        </pre>
                     </article>
                 </Col>
             </Row>
