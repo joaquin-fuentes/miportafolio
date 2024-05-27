@@ -2,7 +2,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Fira Code", monospace;
 }
 
 .main {
@@ -34,7 +33,12 @@
 }
 
 .navBar.scrolled {
-  background-color: rgba(0,0,0,0.7); /* Fondo más oscuro cuando se hace scroll */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fondo más oscuro cuando se hace scroll */
 }
 
 .navbarToggle {
@@ -113,6 +117,7 @@ code {
 }
 pre {
   color: #dcdfe4d8;
+  font-family: "Fira Code", monospace;
 }
 /* SOBRE MI Y TRABAJO */
 .titulo {
