@@ -4,6 +4,7 @@ import portadaPortafolio from "../../assets/portadamiportafolio.png"
 import portadaTKC from "../../assets/portadatkc.png"
 import portadaLJ from "../../assets/portadalj.png"
 import portadaBonDia from "../../assets/portadaproyectogrupal.png"
+import portadaCopaAmerica from "../../assets/portadaCopaAmerica.png"
 
 // import portadaBonDia from "../../assets/portadabondia.png"
 
@@ -56,17 +57,17 @@ const Proyectos = () => {
                         </div>
                     </article>
                 </Col>
-                {/* <Col xs={11} md={5} lg={4} className='text-center'>
+                <Col xs={11} md={5} lg={4} className='text-center'>
                     <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaBonDia} alt=" imagen proyecto bom dia" width="100%" className='rounded' />
-                        <h4 className='mt-2 nombreProyecto'>Bon Dia </h4>
+                        <img src={portadaCopaAmerica} alt=" imagen proyecto copa america" width="100%" className='rounded' />
+                        <h4 className='mt-2 nombreProyecto'>Copa América 2024</h4>
                         <div className=''>
-                            <a href="https://github.com/joaquin-fuentes/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>  Github</a>
+                            <a href="https://github.com/joaquin-fuentes/copa-america-info" target='_blank' className='linkProyectoGithub'>  Github</a>
                             <span> - </span>
-                            <a href="https://bondia-restaurant.netlify.app/" target='_blank' className='linkProyectoGithub'>Página web</a>
+                            <a href="https://copa-america-info.netlify.app/" target='_blank' className='linkProyectoGithub'>Página web</a>
                         </div>
                     </article>
-                </Col> */}
+                </Col>
 
             </Row>
             <a data-aos="fade-up" href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto btn btn-warning text-dark my-4 '>GITHUB</a>

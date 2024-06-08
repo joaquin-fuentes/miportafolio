@@ -114,10 +114,10 @@
 }
 code {
   text-align: start;
+  font-family: "Fira Code", monospace;
 }
 pre {
   color: #dcdfe4d8;
-  font-family: "Fira Code", monospace;
 }
 /* SOBRE MI Y TRABAJO */
 .titulo {
