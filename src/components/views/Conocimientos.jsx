@@ -106,13 +106,13 @@ const Conocimientos = () => {
         <Col xs={5} md={3} className="text-center">
           <article data-aos="fade-up" className=" my-3 p-2">
             <DiScrum className="icono text-info"></DiScrum>
-            <h4>Metodologias Ágiles (SCRUM)</h4>
+            <h4>SCRUM</h4>
           </article>
         </Col>
         <Col xs={5} md={3} className="text-center">
           <article data-aos="fade-up" className=" my-3 p-2">
             <TbApi className="icono text-danger"></TbApi>
-            <h4>Creación y consumo de apis</h4>
+            <h4>MANEJO DE APIS</h4>
           </article>
         </Col>
       </Row>
