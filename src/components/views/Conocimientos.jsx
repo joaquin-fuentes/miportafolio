@@ -14,6 +14,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
 import { TbApi } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
+import { GiBearFace } from "react-icons/gi";
 
 
 const Conocimientos = () => {
@@ -61,13 +62,9 @@ const Conocimientos = () => {
           </article>
         </Col>
         <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <img
-              src="https://repository-images.githubusercontent.com/180328715/fca49300-e7f1-11ea-9f51-cfd949b31560"
-              alt=""
-              className="icono w-50"
-            />
-            <h4>ZUSTAND</h4>
+          <article data-aos="fade-up" className="my-3 p-2">
+            <GiBearFace className="icono text-zustand" />
+            <h4 className="">ZUSTAND</h4>
           </article>
         </Col>
         <Col xs={5} md={3} className="text-center">

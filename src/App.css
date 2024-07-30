@@ -125,10 +125,13 @@ pre {
 }
 /* CONOCIMIENTOS */
 .icono {
-  font-size: 60px;
+  font-size: 62px;
 }
 .tarjetaConocimiento {
   height: 120px; /* Ajusta la altura deseada según tus necesidades */
+  border: 1px solid gray;
+  padding: 20px ;
+  margin: 5px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,6 +143,9 @@ pre {
 }
 .text-redux{
   color: rgb(169, 48, 169);
+}
+.text-zustand{
+  color: rgb(155, 46, 9);
 }
 /* contacto */
 .datoContacto {
@@ -218,3 +224,5 @@ pre {
     width: 50%;
   }
 }
+
+
