@@ -138,6 +138,9 @@ pre {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.text-redux{
+  color: rgb(169, 48, 169);
+}
 /* contacto */
 .datoContacto {
   color: white;
