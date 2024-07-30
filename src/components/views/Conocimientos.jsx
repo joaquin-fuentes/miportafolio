@@ -13,6 +13,8 @@ import { SiRedux } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
 import { TbApi } from "react-icons/tb";
+import { SiTypescript } from "react-icons/si";
+
 
 const Conocimientos = () => {
   return (
@@ -39,6 +41,13 @@ const Conocimientos = () => {
             <h4>JAVASCRIPT</h4>
           </article>
         </Col>
+        <Col xs={5} md={3} className="text-center">
+          <article data-aos="fade-up" className=" my-3 p-2">
+            <SiTypescript className="icono text-primary p-2"></SiTypescript>
+            <h4>TYPESCRIPT</h4>
+          </article>
+        </Col>
+
         <Col xs={5} md={3} className="text-center">
           <article data-aos="fade-up" className=" my-3 p-2">
             <FaReact className="icono text-info"></FaReact>
