@@ -77,7 +77,7 @@ const Conocimientos = () => {
         </Col>
         <Col xs={6} md={3} className="text-center">
           <article data-aos="fade-up" className=" my-3 p-2">
-            <DiMongodb className="icono text-success-emphasis"></DiMongodb>
+            <DiMongodb className="icono text-success"></DiMongodb>
             <h4>MONGO DB</h4>
           </article>
         </Col>

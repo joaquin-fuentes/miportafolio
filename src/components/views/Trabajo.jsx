@@ -9,6 +9,8 @@ const Trabajo = () => {
             <h6 className='text-center mb-3'>Tutor en curso de Desarrollo Web</h6>
             <h4 className='fw-bold text-center'>Tucumán Kayak Club</h4>
             <h6 className='text-center mb-3'>Desarrollo y mantenimiento de página web</h6>
+            <h4 className='fw-bold text-center'>Trece Software</h4>
+            <h6 className='text-center mb-3'>Desarrollador Frontend con React</h6>
             <h4 className='fw-bold text-center'>Extras</h4>
             <h6 className='text-center mb-3'>Desarrollos individuales y grupales para trabajos con fines educativos</h6>
         </Container>

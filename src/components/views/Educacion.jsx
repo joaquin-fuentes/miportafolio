@@ -41,6 +41,7 @@ const Educacion = () => {
             <br />
             <h4 className='fw-bold'>RollingCode</h4>
             <h6>Curso de Programacion Web FullStack</h6>
+            <h6>Curso de React Avanzado</h6>
             <br />
             <h4 className='fw-bold'>Udemy</h4>
             <h6>Curso de SQL desde cero</h6>

@@ -34,7 +34,7 @@ const SobreMi = () => {
             <h2 className='text-center titulo mb-3'>Sobre mí</h2>
             <h4>¿Quién soy?</h4>
             <h6>Hola! Mi nombre es Joaquin Fuentes! Tengo 30 años. Me considero un joven apasionado de la tecnologica y la programacion. <br />
-                Me gusta aprender nuevas tecnologías, solcionar problemas y adaptarme a nuevos conocimientos o lenguajes.</h6>
+                Me gusta aprender nuevas tecnologías, solucionar problemas y adaptarme a nuevos conocimientos o lenguajes.</h6>
             <Button variant='warning' className='my-2' onClick={() => setModalShow(true)}> Ver CV </Button>
             <MyVerticallyCenteredModal
                 show={modalShow}
