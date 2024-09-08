@@ -73,8 +73,7 @@
     flex-direction: column;
     align-items: end;
   }
-}
-/* PORTADA */
+} /* PORTADA */
 .portada {
   background: linear-gradient(to right, #020116d9, #72736963),
     url("./assets/fondop1.jpg");
@@ -91,12 +90,7 @@
   margin-top: 35px;
 }
 
-.contenedor-textoPortada {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+.contenedor-textoPortada,
 .contenedor-imagen {
   display: flex;
   justify-content: center;
@@ -112,12 +106,17 @@
   color: rgb(196, 196, 196);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.71);
 }
-code {
-  text-align: start;
-  font-family: "Fira Code", monospace;
-}
+
 pre {
   color: #dcdfe4d8;
+  font-family: "Fira Code", monospace;
+  white-space: pre-wrap;
+}
+
+.code-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
 }
 /* SOBRE MI Y TRABAJO */
 .titulo {
@@ -130,7 +129,7 @@ pre {
 .tarjetaConocimiento {
   height: 120px; /* Ajusta la altura deseada según tus necesidades */
   border: 1px solid gray;
-  padding: 20px ;
+  padding: 20px;
   margin: 5px 0;
   display: flex;
   flex-direction: column;
@@ -141,10 +140,10 @@ pre {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.text-redux{
+.text-redux {
   color: rgb(169, 48, 169);
 }
-.text-zustand{
+.text-zustand {
   color: rgb(155, 46, 9);
 }
 /* contacto */
@@ -196,6 +195,24 @@ pre {
   padding-top: 100px !important;
 }
 
+@media (max-width: 768px) {
+  .portada {
+    padding: 40px;
+    height: auto; /* Ajuste dinámico para pantallas pequeñas */
+  }
+  .img-portada {
+    margin-top: 20px;
+  }
+  .text-nombre {
+    font-size: 2rem;
+  }
+  .text-puesto {
+    font-size: 1.5rem;
+  }
+  pre {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 576px) {
   .portada {
     padding: 60px;
@@ -224,5 +241,3 @@ pre {
     width: 50%;
   }
 }
-
-
