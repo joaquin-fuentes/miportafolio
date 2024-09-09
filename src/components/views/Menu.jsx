@@ -1,54 +1,160 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Navbar, Nav } from "react-bootstrap";
-import logoOscuro from "../../assets/logo1.png";
+import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import logoOscuro from "../../assets/logo1.png";
 
 const Menu = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen); // Cambia el estado para abrir/cerrar el menú
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+  return (
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out
+        ${
+          scrolled
+            ? "bg-[#023047] shadow-lg"
+            : "lg:bg-transparent bg-[#023047] lg:shadow-none"
+        }
+      `}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <a href="#home">
+          <img
+            src={logoOscuro}
+            alt="Logo de Joaquín Fuentes - Desarrollador Web Full Stack"
+            className="w-20"
+          />
+        </a>
 
-    return (
-        <Navbar expand="lg" className={`navBar ${scrolled ? 'scrolled' : ''}`}>
-            <Container>
-                <Navbar.Brand href="#home" className='text-light fw-bold'>
-                    <img src={logoOscuro} alt="Logo joaquin fuentes" className='logoMenu rounded me-1' /> ¡Bienvenido!
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className='navbarToggle' onClick={toggleMenu}>
-                    {menuOpen ? <IoClose className='menuHamburguesaAbierto transitionMenu' /> : <GiHamburgerMenu className='menuHamburguesaCerrado transitionMenu' />}
-                </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto contenedorEnlacesNav">
-                        <Nav.Link className="text-light text-hover fw-bold" href="#sobremi">Sobre mí</Nav.Link>
-                        <Nav.Link className="text-light text-hover fw-bold" href="#experiencia">Experiencia</Nav.Link>
-                        <Nav.Link className="text-light text-hover fw-bold" href="#conocimientos">Conocimientos</Nav.Link>
-                        <Nav.Link className="text-light text-hover fw-bold" href="#contacto">Contacto</Nav.Link>
-                        <Nav.Link className="text-light text-hover fw-bold" href="#educacion">Educacion</Nav.Link>
-                        <Nav.Link className="text-light text-hover fw-bold" href="#proyectos">Proyectos</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
+        {/* Menú hamburguesa en móviles */}
+        <div className="lg:hidden" onClick={toggleMenu}>
+          {menuOpen ? (
+            <IoClose className="text-white text-4xl cursor-pointer" />
+          ) : (
+            <GiHamburgerMenu className="text-white text-4xl cursor-pointer" />
+          )}
+        </div>
+
+        {/* Links de navegación para pantallas grandes */}
+        <nav className="hidden lg:flex space-x-6">
+          <a
+            href="#sobremi"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Sobre mí
+          </a>
+          <a
+            href="#experiencia"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Experiencia
+          </a>
+          <a
+            href="#conocimientos"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Conocimientos
+          </a>
+          <a
+            href="#contacto"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Contacto
+          </a>
+          <a
+            href="#educacion"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Educación
+          </a>
+          <a
+            href="#proyectos"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Proyectos
+          </a>
+        </nav>
+      </div>
+
+      {/* Menú móvil con enlaces */}
+      <nav
+        className={`lg:hidden bg-[#023047] transition-all duration-500 ease-in-out ${
+          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        } overflow-hidden`}
+      >
+        <ul className="flex flex-col items-center space-y-4 py-4">
+          <li>
+            <a
+              href="#sobremi"
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              Sobre mí
+            </a>
+          </li>
+          <li>
+            <a
+              href="#experiencia"
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              Experiencia
+            </a>
+          </li>
+          <li>
+            <a
+              href="#conocimientos"
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              Conocimientos
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              Contacto
+            </a>
+          </li>
+          <li>
+            <a
+              href="#educacion"
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              Educación
+            </a>
+          </li>
+          <li>
+            <a
+              href="#proyectos"
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              Proyectos
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
 export default Menu;

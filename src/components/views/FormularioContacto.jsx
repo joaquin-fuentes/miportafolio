@@ -1,112 +1,169 @@
-import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import emailjs from 'emailjs-com';
-import Swal from 'sweetalert2';
-import { IoMdMail } from 'react-icons/io';
-import { RiContactsFill } from 'react-icons/ri';
-import { IoIosText } from 'react-icons/io';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
+import { useForm, Controller } from "react-hook-form";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
+import { IoMdMail } from "react-icons/io";
+import { RiContactsFill } from "react-icons/ri";
+import { IoIosText } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FormularioContacto = () => {
-    const { handleSubmit, control, reset, formState: { errors } } = useForm();
+  const {
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-    const onSubmit = (data) => {
-        const templateParams = {
-            user_name: data.name,
-            email_id: data.email,
-            message: data.message,
-            to_name: 'Joaquin'
-        };
-
-        emailjs.send('service_5l0vwj7', 'template_iwqfcfa', templateParams, 'XPpSHMv-oAPxczGrr')
-            .then((response) => {
-                Swal.fire('Enviado!', 'Su mensaje fue enviado correctamente', 'success');
-                reset(); 
-            }, (err) => {
-                Swal.fire('Error!', 'No se pudo procesar su petición', 'error');
-            });
+  const onSubmit = (data) => {
+    const templateParams = {
+      user_name: data.name,
+      email_id: data.email,
+      message: data.message,
+      to_name: "Joaquin",
     };
 
-    return (
-        <div className="text-light d-flex justify-content-center flex-column align-items-center mt-4">
-            <h2 data-aos="fade-up" className='text-center titulo mb-3'>Déjame tu mensaje o feedback</h2>
-            <form data-aos="fade-up" onSubmit={handleSubmit(onSubmit)} className='w-75 row'>
-                <div className='col-12 col-md-6 mt-3'>
-                    <label className='form-label' htmlFor="name">
-                        <RiContactsFill className='iconoForm' /> Nombre
-                    </label>
-                    <Controller
-                        name="name"
-                        control={control}
-                        defaultValue=""
-                        rules={{ required: 'El nombre es obligatorio' }}
-                        render={({ field }) => (
-                            <input
-                                className={`form-control ${errors.name ? 'is-invalid' : ''}`}
-                                placeholder="Ingrese su nombre"
-                                type="text"
-                                id="name"
-                                {...field}
-                            />
-                        )}
-                    />
-                    {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
-                </div>
-                <div className='col-12 col-md-6 mt-3'>
-                    <label className='form-label' htmlFor="email">
-                        <IoMdMail className='iconoForm' /> Email
-                    </label>
-                    <Controller
-                        name="email"
-                        control={control}
-                        defaultValue=""
-                        rules={{
-                            required: 'El email es obligatorio',
-                            pattern: {
-                                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: 'Email inválido'
-                            }
-                        }}
-                        render={({ field }) => (
-                            <input
-                                className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-                                placeholder="Ingrese su email"
-                                type="email"
-                                id="email"
-                                {...field}
-                            />
-                        )}
-                    />
-                    {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
-                </div>
-                <div className='mt-3'>
-                    <label className='form-label' htmlFor="message">
-                        <IoIosText className='iconoForm' /> Mensaje
-                    </label>
-                    <Controller
-                        name="message"
-                        control={control}
-                        defaultValue=""
-                        rules={{ required: 'El mensaje es obligatorio' }}
-                        render={({ field }) => (
-                            <textarea
-                                className={`form-control ${errors.message ? 'is-invalid' : ''}`}
-                                placeholder="Escriba aquí su mensaje"
-                                id="message"
-                                {...field}
-                            ></textarea>
-                        )}
-                    />
-                    {errors.message && <div className="invalid-feedback">{errors.message.message}</div>}
-                </div>
-                <div className='mt-4 d-flex justify-content-center'>
-                    <button className='btn btn-warning btnForm' type="submit">Enviar</button>
-                </div>
-            </form>
-            <ToastContainer />
+    emailjs
+      .send(
+        "service_5l0vwj7",
+        "template_iwqfcfa",
+        templateParams,
+        "XPpSHMv-oAPxczGrr"
+      )
+      .then(
+        (response) => {
+          Swal.fire(
+            "Enviado!",
+            "Su mensaje fue enviado correctamente",
+            "success"
+          );
+          reset(); // Resetea el formulario después de enviarlo
+        },
+        (err) => {
+          Swal.fire("Error!", "No se pudo procesar su petición", "error");
+        }
+      );
+  };
+
+  return (
+    <div className="bg-[#023047] text-white flex flex-col items-center justify-center pt-12 px-6">
+      <h2
+        data-aos="fade-up"
+        className="text-4xl font-bold mb-8 relative inline-block after:content-[''] after:block after:h-1 after:w-16 after:bg-yellow-500 after:mt-2 mx-auto"
+      >
+        Envía tu feedback
+      </h2>
+
+      <form
+        data-aos="fade-up"
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full max-w-3xl space-y-6"
+      >
+        {/* Nombre */}
+        <div>
+          <label className="block mb-2 font-semibold" htmlFor="name">
+            <RiContactsFill className="inline-block mr-2 text-2xl" /> Nombre
+          </label>
+          <Controller
+            name="name"
+            control={control}
+            defaultValue=""
+            rules={{ required: "El nombre es obligatorio" }}
+            render={({ field }) => (
+              <input
+                className={`w-full p-3 bg-[#193f52] text-white rounded-md outline-none focus:ring-2 focus:ring-yellow-500 transition ${
+                  errors.name ? "border-yellow-500" : ""
+                }`}
+                placeholder="Ingrese su nombre"
+                type="text"
+                id="name"
+                {...field}
+              />
+            )}
+          />
+          {errors.name && (
+            <p className="text-yellow-500 text-sm mt-1">
+              {errors.name.message}
+            </p>
+          )}
         </div>
-    );
+
+        {/* Email */}
+        <div>
+          <label className="block mb-2 font-semibold" htmlFor="email">
+            <IoMdMail className="inline-block mr-2 text-2xl" /> Email
+          </label>
+          <Controller
+            name="email"
+            control={control}
+            defaultValue=""
+            rules={{
+              required: "El email es obligatorio",
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Email inválido",
+              },
+            }}
+            render={({ field }) => (
+              <input
+                className={`w-full p-3 bg-[#193f52] text-white rounded-md outline-none focus:ring-2 focus:ring-yellow-500 transition ${
+                  errors.email ? "border-yellow-500" : ""
+                }`}
+                placeholder="Ingrese su email"
+                type="email"
+                id="email"
+                {...field}
+              />
+            )}
+          />
+          {errors.email && (
+            <p className="text-yellow-500 text-sm mt-1">
+              {errors.email.message}
+            </p>
+          )}
+        </div>
+
+        {/* Mensaje */}
+        <div>
+          <label className="block mb-2 font-semibold" htmlFor="message">
+            <IoIosText className="inline-block mr-2 text-2xl" /> Mensaje
+          </label>
+          <Controller
+            name="message"
+            control={control}
+            defaultValue=""
+            rules={{ required: "El mensaje es obligatorio" }}
+            render={({ field }) => (
+              <textarea
+                className={`w-full p-3 bg-[#193f52] text-white rounded-md outline-none focus:ring-2 focus:ring-yellow-500 transition ${
+                  errors.message ? "border-yellow-500" : ""
+                }`}
+                placeholder="Escriba aquí su mensaje"
+                id="message"
+                rows="4"
+                {...field}
+              />
+            )}
+          />
+          {errors.message && (
+            <p className="text-yellow-500 text-sm mt-1">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
+
+        {/* Botón enviar */}
+        <div className="flex justify-center mt-4">
+          <button className="bg-yellow-500 text-black font-semibold px-8 py-3 rounded-md hover:bg-yellow-600 transition">
+            Enviar
+          </button>
+        </div>
+      </form>
+
+      <ToastContainer />
+    </div>
+  );
 };
 
 export default FormularioContacto;

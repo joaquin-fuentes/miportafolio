@@ -1,78 +1,100 @@
-import React from 'react';
-import { Container, Row, Col, Button } from "react-bootstrap"
-import portadaPortafolio from "../../assets/portadamiportafolio.png"
-import portadaTKC from "../../assets/portadatkc.png"
-import portadaLJ from "../../assets/portadalj.png"
-import portadaBonDia from "../../assets/portadaproyectogrupal.png"
-import portadaCopaAmerica from "../../assets/portadaCopaAmerica.png"
+import React from "react";
 
-// import portadaBonDia from "../../assets/portadabondia.png"
+// Importación de imágenes de los proyectos
+import portadaPortafolio from "../../assets/portadamiportafolio.png";
+import portadaTKC from "../../assets/portadatkc.png";
+import portadaLJ from "../../assets/portadalj.png";
+import portadaBonDia from "../../assets/portadaproyectogrupal.png";
+import portadaCopaAmerica from "../../assets/portadaCopaAmerica.png";
+
+// Definimos el array con la información de cada proyecto
+const proyectosData = [
+  {
+    titulo: "Mi Portafolio",
+    imagen: portadaPortafolio,
+    githubUrl: "https://github.com/joaquin-fuentes/nuevoportafolio",
+    demoUrl: "https://joaquin-fuentes.github.io/miportafolio/",
+  },
+  {
+    titulo: "Tucumán Kayak Club",
+    imagen: portadaTKC,
+    githubUrl: "https://github.com/joaquin-fuentes/TKC-Front",
+    demoUrl: "https://tucumankayakclub.netlify.app",
+  },
+  {
+    titulo: "LJ Indumentaria",
+    imagen: portadaLJ,
+    githubUrl: "https://github.com/joaquin-fuentes/leo-indumentaria",
+    demoUrl: "https://lj-indumentaria.netlify.app",
+  },
+  {
+    titulo: "Bon Dia",
+    imagen: portadaBonDia,
+    githubUrl: "https://github.com/MauroDiazSantilli/ProyectoFinal-Grupo3",
+    demoUrl: "https://bondia-restaurant.netlify.app/",
+  },
+  {
+    titulo: "Copa América 2024",
+    imagen: portadaCopaAmerica,
+    githubUrl: "https://github.com/joaquin-fuentes/copa-america-info",
+    demoUrl: "https://copa-america-info.netlify.app/",
+  },
+];
 
 const Proyectos = () => {
-    return (
-        <Container className='py-4 text-center' id="proyectos">
-            <h2 data-aos="fade-up" className='text-center text-light titulo mb-3'>Proyectos</h2>
-            <Row className='text-light d-flex justify-content-center'>
-                <Col xs={11} md={5} lg={4} className='text-center'>
-                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaPortafolio} alt=" imagen proyecto portafolio" width="100%" className='rounded' />
-                        <h4 className='mt-2 nombreProyecto'>Mi portafolio</h4>
-                        <div className=''>
-                            <a href="https://github.com/joaquin-fuentes/nuevoportafolio" target='_blank' className='linkProyectoGithub'>  Github</a>
-                            <span> - </span>
-                            <a href="https://joaquin-fuentes.github.io/miportafolio/" target='_blank' className='linkProyectoGithub'>Página web</a>
-                        </div>
-                    </article>
-                </Col>
-                <Col xs={11} md={5} lg={4} className='text-center'>
-                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaTKC} alt=" imagen proyecto Tucuman Kayak Club" width="100%" className='rounded' />
-                        <h4 className='mt-2 nombreProyecto'>Tucumán Kayak Club</h4>
-                        <div className=''>
-                            <a href="https://github.com/joaquin-fuentes/TKC-Front" target='_blank' className='linkProyectoGithub'>  Github</a>
-                            <span> - </span>
-                            <a href="https://tucumankayakclub.netlify.app" target='_blank' className='linkProyectoGithub'>Página web</a>
-                        </div>
-                    </article>
-                </Col>
-                <Col xs={11} md={5} lg={4} className='text-center'>
-                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaLJ} alt=" imagen proyecto lj indumentaria" width="100%" className='rounded' />
-                        <h4 className='mt-2 nombreProyecto'>LJ Indumentaria</h4>
-                        <div className=''>
-                            <a href="https://github.com/joaquin-fuentes/leo-indumentaria" target='_blank' className='linkProyectoGithub'>  Github</a>
-                            <span> - </span>
-                            <a href="https://lj-indumentaria.netlify.app" target='_blank' className='linkProyectoGithub'>Página web</a>
-                        </div>
-                    </article>
-                </Col>
-                <Col xs={11} md={5} lg={4} className='text-center'>
-                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaBonDia} alt=" imagen proyecto Bon Dia" width="100%" className='rounded' />
-                        <h4 className='mt-2 nombreProyecto'>Bon Dia</h4>
-                        <div className=''>
-                            <a href="https://github.com/MauroDiazSantilli/ProyectoFinal-Grupo3" target='_blank' className='linkProyectoGithub'>  Github</a>
-                            <span> - </span>
-                            <a href="https://bondia-restaurant.netlify.app/" target='_blank' className='linkProyectoGithub'>Página web</a>
-                        </div>
-                    </article>
-                </Col>
-                <Col xs={11} md={5} lg={4} className='text-center'>
-                    <article data-aos="fade-up" className='rounded bg-secondary m-3 p-2 cardProyectos'>
-                        <img src={portadaCopaAmerica} alt=" imagen proyecto copa america" width="100%" className='rounded' />
-                        <h4 className='mt-2 nombreProyecto'>Copa América 2024</h4>
-                        <div className=''>
-                            <a href="https://github.com/joaquin-fuentes/copa-america-info" target='_blank' className='linkProyectoGithub'>  Github</a>
-                            <span> - </span>
-                            <a href="https://copa-america-info.netlify.app/" target='_blank' className='linkProyectoGithub'>Página web</a>
-                        </div>
-                    </article>
-                </Col>
+  return (
+    <section
+      className="py-12 bg-[#023047] text-white text-center"
+      id="proyectos"
+    >
+      <h2
+        data-aos="fade-up"
+        className="text-4xl font-bold mb-12 relative inline-block after:content-[''] after:block after:h-1 after:w-16 after:bg-yellow-500 after:mt-2 mx-auto"
+      >
+        Proyectos
+      </h2>
 
-            </Row>
-            <a data-aos="fade-up" href='https://github.com/joaquin-fuentes' target='_blank' className=' datoContacto btn btn-warning text-dark my-4 '>GITHUB</a>
-        </Container>
-    );
+      {/* Grid para los proyectos */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+        {/* Recorremos el array para generar una tarjeta por cada proyecto */}
+        {proyectosData.map((proyecto, index) => (
+          <div
+            key={index}
+            data-aos="fade-up"
+            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105"
+          >
+            <img
+              src={proyecto.imagen}
+              alt={`Imagen del proyecto ${proyecto.titulo}`}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h4 className="text-2xl font-semibold mb-2">{proyecto.titulo}</h4>
+              <div className="flex justify-center space-x-2">
+                <a
+                  href={proyecto.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-400 hover:text-yellow-300"
+                >
+                  Github
+                </a>
+                <span>|</span>
+                <a
+                  href={proyecto.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-400 hover:text-yellow-300"
+                >
+                  Página web
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Proyectos;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -8,115 +7,113 @@ import {
   FaGithub,
   FaBootstrap,
 } from "react-icons/fa";
-import { DiJavascript, DiMongodb, DiMysql } from "react-icons/di";
-import { SiRedux } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { DiScrum } from "react-icons/di";
-import { TbApi } from "react-icons/tb";
-import { SiTypescript } from "react-icons/si";
+import { DiJavascript, DiMongodb, DiMysql, DiScrum } from "react-icons/di";
+import { SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { GiBearFace } from "react-icons/gi";
+import { TbApi } from "react-icons/tb";
 
+const conocimientos = [
+  { id: 1, name: "HTML", icon: <FaHtml5 className="text-6xl text-red-500" /> },
+  {
+    id: 2,
+    name: "CSS",
+    icon: <FaCss3Alt className="text-6xl text-blue-500" />,
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    icon: <DiJavascript className="text-6xl text-yellow-400" />,
+  },
+  {
+    id: 4,
+    name: "TypeScript",
+    icon: <SiTypescript className="text-6xl text-blue-600" />,
+  },
+  {
+    id: 5,
+    name: "React",
+    icon: <FaReact className="text-6xl text-cyan-400" />,
+  },
+  {
+    id: 6,
+    name: "Redux",
+    icon: <SiRedux className="text-6xl text-purple-500" />,
+  },
+  {
+    id: 7,
+    name: "Zustand",
+    icon: <GiBearFace className="text-6xl text-orange-500" />,
+  },
+  {
+    id: 8,
+    name: "Node.js",
+    icon: <FaNodeJs className="text-6xl text-green-600" />,
+  },
+  {
+    id: 9,
+    name: "MySQL",
+    icon: <DiMysql className="text-6xl text-blue-700" />,
+  },
+  {
+    id: 10,
+    name: "MongoDB",
+    icon: <DiMongodb className="text-6xl text-green-600" />,
+  },
+  {
+    id: 11,
+    name: "GitHub",
+    icon: <FaGithub className="text-6xl text-gray-800" />,
+  },
+  {
+    id: 12,
+    name: "Bootstrap",
+    icon: <FaBootstrap className="text-6xl text-purple-700" />,
+  },
+  {
+    id: 13,
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss className="text-6xl text-cyan-500" />,
+  },
+  {
+    id: 14,
+    name: "Scrum",
+    icon: <DiScrum className="text-6xl text-blue-400" />,
+  },
+  {
+    id: 15,
+    name: "Manejo de APIs",
+    icon: <TbApi className="text-6xl text-red-500" />,
+  },
+];
 
 const Conocimientos = () => {
   return (
-    <Container className="py-4" id="conocimientos">
-      <h2 data-aos="fade-up" className="text-center text-light titulo mb-3">
-        Conocimientos
-      </h2>
-      <Row className="text-light d-flex justify-content-center">
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <FaHtml5 className="icono text-danger"></FaHtml5>
-            <h4>HTML</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <FaCss3Alt className="icono text-primary"></FaCss3Alt>
-            <h4>CSS</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <DiJavascript className="icono text-warning"></DiJavascript>
-            <h4>JAVASCRIPT</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <SiTypescript className="icono text-primary p-2"></SiTypescript>
-            <h4>TYPESCRIPT</h4>
-          </article>
-        </Col>
+    <section className="py-12 bg-[#023047] text-white" id="conocimientos">
+      <div className="text-center mb-12">
+        <h2
+          data-aos="fade-up"
+          className="text-4xl font-bold relative inline-block after:content-[''] after:block after:h-1 after:w-16 after:bg-yellow-500 after:mt-2 mx-auto"
+        >
+          Conocimientos
+        </h2>
+      </div>
 
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <FaReact className="icono text-info"></FaReact>
-            <h4>REACT</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <SiRedux className="icono text-redux" />
-            <h4>REDUX</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className="my-3 p-2">
-            <GiBearFace className="icono text-zustand" />
-            <h4 className="">ZUSTAND</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <FaNodeJs className="icono text-success"></FaNodeJs>
-            <h4>NODE JS</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <DiMysql className="icono text-secondary"></DiMysql>
-            <h4>MYSQL</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <DiMongodb className="icono text-success"></DiMongodb>
-            <h4>MONGO DB</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <FaGithub className="icono text-black bg-light rounded-circle"></FaGithub>
-            <h4>GITHUB</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <FaBootstrap className="icono text-redux"></FaBootstrap>
-            <h4>Bootstrap</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <SiTailwindcss className="icono text-primary"></SiTailwindcss>
-            <h4>Tailwind</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <DiScrum className="icono text-info"></DiScrum>
-            <h4>SCRUM</h4>
-          </article>
-        </Col>
-        <Col xs={5} md={3} className="text-center">
-          <article data-aos="fade-up" className=" my-3 p-2">
-            <TbApi className="icono text-danger"></TbApi>
-            <h4>MANEJO DE APIS</h4>
-          </article>
-        </Col>
-      </Row>
-    </Container>
+      {/* Ajustamos el grid usando auto-fit y minmax */}
+      <div className="max-w-7xl mx-auto grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-8 px-4">
+        {conocimientos.map((item) => (
+          <div
+            key={item.id}
+            data-aos="fade-up"
+            className="flex flex-col items-center justify-center"
+          >
+            <div className="hover:scale-110 transition-transform duration-200">
+              {item.icon}
+            </div>
+            <h4 className="mt-2 text-lg text-center">{item.name}</h4>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
