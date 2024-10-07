@@ -9,7 +9,7 @@ import certificadoLinkedin4JSEsencial from "../../assets/certificadoLinkedin4JSE
 import certificadoLinkedin5Mysql from "../../assets/certificadoLinkedin5Mysql.png";
 import certificadoPlatziFrontEnd from "../../assets/certificadoPlatziFrontEnd.png";
 import certificadoUdemySQL from "../../assets/certificadoUdemySQL.png";
-import certificadoReactAvanzado from "../../assets/certificado-React-Avanzado-RollingCode.png";
+import certificadoReactAvanzado from "../../assets/cretificado-React-Avanzado-RollingCode.png";
 
 const certificados = [
   certificadoRollingCode,
