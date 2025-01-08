@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
-  }
-  
+  scroll-behavior: smooth;
+  scroll-margin-top: 85px; /* Ajusta el valor según la altura del header */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffbf00;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffbf00;
+}

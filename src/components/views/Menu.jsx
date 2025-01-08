@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import logoOscuro from "../../assets/logo1.png";
@@ -6,9 +6,20 @@ import logoOscuro from "../../assets/logo1.png";
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setMenuOpen(false);
+    }
   };
 
   useEffect(() => {
@@ -21,8 +32,11 @@ const Menu = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -73,7 +87,7 @@ const Menu = () => {
             href="#conocimientos"
             className="text-white hover:text-yellow-400 transition font-medium"
           >
-            Conocimientos
+            Stack Tecnológico
           </a>
           <a
             href="#contacto"
@@ -98,6 +112,7 @@ const Menu = () => {
 
       {/* Menú móvil con enlaces */}
       <nav
+        ref={menuRef}
         className={`lg:hidden bg-[#023047] transition-all duration-500 ease-in-out ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
@@ -107,6 +122,7 @@ const Menu = () => {
             <a
               href="#sobremi"
               className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={handleLinkClick}
             >
               Sobre mí
             </a>
@@ -115,6 +131,7 @@ const Menu = () => {
             <a
               href="#experiencia"
               className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={handleLinkClick}
             >
               Experiencia
             </a>
@@ -123,14 +140,16 @@ const Menu = () => {
             <a
               href="#conocimientos"
               className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={handleLinkClick}
             >
-              Conocimientos
+              Stack Tecnológico
             </a>
           </li>
           <li>
             <a
               href="#contacto"
               className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={handleLinkClick}
             >
               Contacto
             </a>
@@ -139,6 +158,7 @@ const Menu = () => {
             <a
               href="#educacion"
               className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={handleLinkClick}
             >
               Educación
             </a>
@@ -147,6 +167,7 @@ const Menu = () => {
             <a
               href="#proyectos"
               className="text-white hover:text-yellow-400 transition font-medium"
+              onClick={handleLinkClick}
             >
               Proyectos
             </a>

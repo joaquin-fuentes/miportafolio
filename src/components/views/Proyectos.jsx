@@ -1,7 +1,7 @@
 import React from "react";
 
 // Importación de imágenes de los proyectos
-import portadaPortafolio from "../../assets/portadamiportafolio.png";
+import portadaPortafolio from "../../assets/imgPortadaPortafolio.png";
 import portadaTKC from "../../assets/portadatkc.png";
 import portadaLJ from "../../assets/portadalj.png";
 import portadaBonDia from "../../assets/portadaproyectogrupal.png";
@@ -14,37 +14,52 @@ const proyectosData = [
     imagen: portadaPortafolio,
     githubUrl: "https://github.com/joaquin-fuentes/nuevoportafolio",
     demoUrl: "https://joaquin-fuentes.github.io/miportafolio/",
+    descripcion:
+      "Este es un portafolio personal donde muestro mis proyectos y habilidades técnicas.",
+    etiqueta: "Reactjs / Tailwind",
   },
   {
     titulo: "Tucumán Kayak Club",
     imagen: portadaTKC,
     githubUrl: "https://github.com/joaquin-fuentes/TKC-Front",
     demoUrl: "https://tucumankayakclub.netlify.app",
+    descripcion:
+      "Landing page para una empresa de turismo aventura con toda la información necesaria.",
+    etiqueta: "Reactjs / Tailwind / Nodejs / Mongodb",
   },
   {
     titulo: "LJ Indumentaria",
     imagen: portadaLJ,
     githubUrl: "https://github.com/joaquin-fuentes/leo-indumentaria",
     demoUrl: "https://lj-indumentaria.netlify.app",
+    descripcion:
+      "E-commerce para una tienda de ropa con diseño responsivo y panel de administración.",
+    etiqueta: "Reactjs / Bootstrap / Nodejs / Mongodb",
   },
   {
     titulo: "Bon Dia",
     imagen: portadaBonDia,
     githubUrl: "https://github.com/MauroDiazSantilli/ProyectoFinal-Grupo3",
     demoUrl: "https://bondia-restaurant.netlify.app/",
+    descripcion:
+      "Sitio web para un restaurante, desarrollado como proyecto grupal.",
+    etiqueta: "Reactjs / Bootstrap / Nodejs / Mongodb",
   },
   {
     titulo: "Copa América 2024",
     imagen: portadaCopaAmerica,
     githubUrl: "https://github.com/joaquin-fuentes/copa-america-info",
     demoUrl: "https://copa-america-info.netlify.app/",
+    descripcion:
+      "Aplicación informativa sobre la Copa América 2024 con detalles y estadísticas.",
+    etiqueta: "Html / Css",
   },
 ];
 
 const Proyectos = () => {
   return (
     <section
-      className="py-12 bg-[#023047] text-white text-center"
+      className="scroll-mt-20 py-12 bg-[#023047] text-white text-center"
       id="proyectos"
     >
       <h2
@@ -54,38 +69,51 @@ const Proyectos = () => {
         Proyectos
       </h2>
 
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 px-6">
-        {/* Recorremos el array para generar una tarjeta por cada proyecto */}
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 px-4">
         {proyectosData.map((proyecto, index) => (
           <div
             key={index}
             data-aos="fade-up"
-            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 w-full sm:w-1/3 lg:w-1/4"
+            className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 w-[85%] md:w-[40%] lg:w-[30%] flex flex-col"
           >
-            <img
-              src={proyecto.imagen}
-              alt={`Imagen del proyecto ${proyecto.titulo}`}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h4 className="text-2xl font-semibold mb-2">{proyecto.titulo}</h4>
-              <div className="flex justify-center space-x-2">
+            <div className="relative">
+              <img
+                src={proyecto.imagen}
+                alt={`Imagen del proyecto ${proyecto.titulo}`}
+                className="w-full h-40 object-cover rounded-t-xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute bottom-4 left-4 opacity-90">
+                {proyecto.etiqueta && (
+                  <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                    {proyecto.etiqueta}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="p-6 flex flex-col flex-grow justify-between bg-gray-900 hover:bg-gray-700 transition-colors duration-300">
+              <div>
+                <h4 className="text-2xl font-semibold text-white mb-2">
+                  {proyecto.titulo}
+                </h4>
+                <p className="text-gray-400 text-sm">{proyecto.descripcion}</p>
+              </div>
+              <div className="flex justify-center space-x-4 mt-4">
                 <a
                   href={proyecto.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-yellow-400 hover:text-yellow-300"
+                  className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm tracking-wide border border-yellow-400 hover:border-yellow-300 px-4 py-2 rounded-lg transition-all duration-300 shadow-lg"
                 >
-                  Github
+                  Ver en Github
                 </a>
-                <span>|</span>
                 <a
                   href={proyecto.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-yellow-400 hover:text-yellow-300"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-sm tracking-wide px-4 py-2 rounded-lg transition-all duration-300 shadow-lg"
                 >
-                  Página web
+                  Ver Página Web
                 </a>
               </div>
             </div>

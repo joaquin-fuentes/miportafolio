@@ -3,7 +3,7 @@ import React from "react";
 const Trabajo = () => {
   return (
     <section
-      className="text-white p-8 bg-[#023047] text-center"
+      className="scroll-mt-20 text-white p-8 bg-[#023047] text-center"
       id="experiencia"
     >
       {/* Título con subrayado decorativo */}
@@ -11,7 +11,7 @@ const Trabajo = () => {
         data-aos="fade-up"
         className="text-4xl font-bold mb-8 relative inline-block after:content-[''] after:block after:h-1 after:w-16 after:bg-yellow-500 after:mt-2 mx-auto text-center"
       >
-        Trabajo
+        Experiencia 
       </h2>
 
       {/* Experiencias laborales */}

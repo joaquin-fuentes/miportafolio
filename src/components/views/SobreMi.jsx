@@ -59,7 +59,7 @@ const SobreMi = () => {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <section className="text-white p-8 text-center bg-[#023047]" id="sobremi">
+    <section className=" scroll-mt-20 text-white p-8 text-center bg-[#023047]" id="sobremi">
       {/* Título con subrayado decorativo */}
       <h2
         data-aos="fade-up"
@@ -70,13 +70,15 @@ const SobreMi = () => {
       <h4 data-aos="fade-up" className="text-2xl mb-4">
         ¿Quién soy?
       </h4>
-      <p data-aos="fade-up" className="text-lg mb-6">
-        Hola! Mi nombre es Joaquin Fuentes! Tengo 30 años. Me considero un joven
-        apasionado de la tecnología y la programación.
-        <br />
-        Me gusta aprender nuevas tecnologías, solucionar problemas y adaptarme a
-        nuevos conocimientos o lenguajes.
-      </p>
+      <div className="flex justify-center">
+        <p data-aos="fade-up" className="text-lg mb-6 lg:w-2/3 flex">
+          Hola! Mi nombre es Joaquin Fuentes! Tengo 30 años. Me considero un
+          joven apasionado de la tecnología y la programación.
+          <br />
+          Me gusta aprender nuevas tecnologías, solucionar problemas y adaptarme
+          a nuevos conocimientos o lenguajes.
+        </p>
+      </div>
       <button
         data-aos="fade-up"
         className="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md hover:bg-yellow-600 transition my-2"

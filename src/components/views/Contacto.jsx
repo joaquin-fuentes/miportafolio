@@ -9,7 +9,7 @@ const url = `https://api.whatsapp.com/send?phone=${3816097754}&text=${encodeURIC
 const Contacto = () => {
   return (
     <section
-      className="py-12 bg-[#023047] text-white text-center"
+      className="scroll-mt-20 py-12 bg-[#023047] text-white text-center"
       id="contacto"
     >
       <h2
@@ -19,7 +19,7 @@ const Contacto = () => {
         Contacto
       </h2>
 
-      <div className="flex flex-col items-center space-y-6">
+      <div className="flex flex-col items-center space-y-6 md:space-y-12">
         {/* WhatsApp */}
         <a
           data-aos="fade-up"

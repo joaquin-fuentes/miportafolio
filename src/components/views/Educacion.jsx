@@ -6,7 +6,7 @@ const Educacion = () => {
 
   return (
     <section
-      className="text-white py-12 bg-[#023047] text-center"
+      className="scroll-mt-20 text-white py-12 bg-[#023047] text-center"
       id="educacion"
     >
       <h2
