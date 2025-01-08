@@ -19,7 +19,9 @@ const Trabajo = () => {
         {/* RollingCode */}
         <div data-aos="fade-up" className="text-center">
           <h4 className="text-2xl font-semibold">RollingCode</h4>
+          <h6 className="text-lg">Desarrollador Web</h6>
           <h6 className="text-lg">Tutor en curso de Desarrollo Web</h6>
+
         </div>
 
         {/* Tucumán Kayak Club */}

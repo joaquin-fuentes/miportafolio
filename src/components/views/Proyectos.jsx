@@ -54,14 +54,13 @@ const Proyectos = () => {
         Proyectos
       </h2>
 
-      {/* Grid para los proyectos */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 px-6">
         {/* Recorremos el array para generar una tarjeta por cada proyecto */}
         {proyectosData.map((proyecto, index) => (
           <div
             key={index}
             data-aos="fade-up"
-            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105"
+            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 w-full sm:w-1/3 lg:w-1/4"
           >
             <img
               src={proyecto.imagen}

@@ -34,7 +34,9 @@ const Educacion = () => {
           <h4 className="text-2xl font-semibold">Udemy</h4>
           <h6 className="text-lg">Curso de SQL desde cero</h6>
           <h6 className="text-lg">Curso de Node JS</h6>
-          <h6 className="text-lg">Curso de REACT</h6>
+          <h6 className="text-lg">Curso de REACT Js</h6>
+          <h6 className="text-lg">Curso de Next Js</h6>
+
         </div>
 
         <div data-aos="fade-up">
