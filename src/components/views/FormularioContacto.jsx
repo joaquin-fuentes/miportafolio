@@ -20,7 +20,7 @@ const FormularioContacto = () => {
     const templateParams = {
       user_name: data.name,
       email_id: data.email,
-      message: data.message,
+      message: `Hola, este es un msj de tu PORTAFOLIO  Mensaje adicional: ${data.message}`,
       to_name: "Joaquin",
     };
 
