@@ -13,7 +13,7 @@ const proyectosData = [
     titulo: "Mi Portafolio",
     imagen: portadaPortafolio,
     githubUrl: "https://github.com/joaquin-fuentes/nuevoportafolio",
-    demoUrl: "https://joaquin-fuentes.github.io/miportafolio/",
+    demoUrl: "https://joaquinfuentes.site/",
     descripcion:
       "Este es un portafolio personal donde muestro mis proyectos y habilidades técnicas.",
     etiqueta: "Reactjs / Tailwind",
