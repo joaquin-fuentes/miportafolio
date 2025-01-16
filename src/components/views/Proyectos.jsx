@@ -6,6 +6,7 @@ import portadaTKC from "../../assets/portadatkc.png";
 import portadaLJ from "../../assets/portadalj.png";
 import portadaBonDia from "../../assets/portadaproyectogrupal.png";
 import portadaCopaAmerica from "../../assets/portadaCopaAmerica.png";
+import portadaHospedajes from "../../assets/portadaHospedajes.png";
 
 // Definimos el array con la información de cada proyecto
 const proyectosData = [
@@ -53,6 +54,15 @@ const proyectosData = [
     descripcion:
       "Aplicación informativa sobre la Copa América 2024 con detalles y estadísticas.",
     etiqueta: "Html / Css",
+  },
+  {
+    titulo: "Hospedajes Cadillal",
+    imagen: portadaHospedajes,
+    githubUrl: "https://github.com/joaquin-fuentes/hospedajes-cadillal-front",
+    demoUrl: "https://www.hospedajescadillal.com/",
+    descripcion:
+      "Página web con hospedajes verificados para mayor seguridad de las personas.",
+    etiqueta: "Reactjs / Tailwind / Nodejs / Mongodb",
   },
 ];
 
