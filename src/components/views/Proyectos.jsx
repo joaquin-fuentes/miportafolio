@@ -1,5 +1,3 @@
-import React from "react";
-
 // Importación de imágenes de los proyectos
 import portadaPortafolio from "../../assets/imgPortadaPortafolio.png";
 import portadaTKC from "../../assets/portadatkc.png";
@@ -7,6 +5,8 @@ import portadaLJ from "../../assets/portadalj.png";
 import portadaBonDia from "../../assets/portadaproyectogrupal.png";
 import portadaCopaAmerica from "../../assets/portadaCopaAmerica.png";
 import portadaHospedajes from "../../assets/portadaHospedajes.png";
+import portadaRollingCode from "../../assets/portadaRollingCode.png";
+import portadaRollingCodeKids from "../../assets/portadaRollingCodeKids.png";
 
 // Definimos el array con la información de cada proyecto
 const proyectosData = [
@@ -64,6 +64,22 @@ const proyectosData = [
       "Página web con hospedajes verificados para mayor seguridad de las personas.",
     etiqueta: "Reactjs / Tailwind / Nodejs / Mongodb",
   },
+  {
+    titulo: "RollingCode School",
+    imagen: portadaRollingCode,
+    githubUrl: "",
+    demoUrl: "https://web.rollingcodeschool.com/",
+    descripcion: "Página web institucional de RollingCode school.",
+    etiqueta: "NextJs / Tailwind",
+  },
+  {
+    titulo: "RollingCode Kids",
+    imagen: portadaRollingCodeKids,
+    githubUrl: "",
+    demoUrl: "https://kids.rollingcodeschool.com/",
+    descripcion: "Página web de RollingCode Kids.",
+    etiqueta: "React / Tailwind",
+  },
 ];
 
 const Proyectos = () => {
@@ -109,14 +125,16 @@ const Proyectos = () => {
                 <p className="text-gray-400 text-sm">{proyecto.descripcion}</p>
               </div>
               <div className="flex justify-center space-x-4 mt-4">
-                <a
-                  href={proyecto.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm tracking-wide border border-yellow-400 hover:border-yellow-300 px-4 py-2 rounded-lg transition-all duration-300 shadow-lg"
-                >
-                  Ver en Github
-                </a>
+                {proyecto.githubUrl && (
+                  <a
+                    href={proyecto.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm tracking-wide border border-yellow-400 hover:border-yellow-300 px-4 py-2 rounded-lg transition-all duration-300 shadow-lg"
+                  >
+                    Ver en Github
+                  </a>
+                )}
                 <a
                   href={proyecto.demoUrl}
                   target="_blank"
