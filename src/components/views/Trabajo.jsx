@@ -1,4 +1,3 @@
-import React from "react";
 import logoTkc from "../../assets/logoTkc.png";
 import logoTrece from "../../assets/logoTrece.png";
 import logoRolling from "../../assets/logoRolling.png";
@@ -31,8 +30,9 @@ const Trabajo = () => {
             <h4 className="text-2xl font-semibold inline-block">RollingCode</h4>
           </div>
           <div>
-            <h6 className="text-lg">Desarrollador Web</h6>
+            <h6 className="text-lg">Desarrollador Web Fullstack</h6>
             <h6 className="text-lg">Tutor en curso de Desarrollo Web</h6>
+            <h6 className="text-lg">Mentor en curso de Desarrollo Web</h6>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ const Trabajo = () => {
         {/* Extras */}
         <div data-aos="fade-up" className="text-center">
           <h4 className="text-2xl font-semibold flex justify-center items-center space-x-2">
-            <BiRocket  className="text-yellow-400" /> {/* Ícono decorativo */}
+            <BiRocket className="text-yellow-400" /> {/* Ícono decorativo */}
             <span>Extras</span>
           </h4>{" "}
           <h6 className="text-lg">
