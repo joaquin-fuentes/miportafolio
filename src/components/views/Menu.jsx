@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import logoOscuro from "../../assets/logo1.png";
+import logoOscuro from "../../assets/logoT4.png";
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ const Menu = () => {
           <img
             src={logoOscuro}
             alt="Logo de Joaquín Fuentes - Desarrollador Web Full Stack"
-            className="w-20"
+            className="w-[200px] md:w-[250px] imgLogo "
           />
         </a>
 

@@ -15,3 +15,7 @@ html {
 .swiper-pagination-bullet-active {
   background-color: #ffbf00;
 }
+
+.imgLogo {
+  filter: invert(1) brightness(2);
+}
