@@ -131,7 +131,7 @@ export default function Laberinto() {
         paredes.
       </p>
 
-      <div className="mb-4">
+      <div data-aos="fade-up" className="mb-4">
         {isPlaying && <span className="text-yellow-400">Tiempo: {timer}s</span>}
         {gameState === "win" && (
           <span className="text-green-400 ml-4">Tiempo final: {timer}s</span>
