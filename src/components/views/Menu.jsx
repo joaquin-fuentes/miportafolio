@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import logoOscuro from "../../assets/logoT4.png";
+import { useClimaStore } from "../../store/apiClima";
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,6 +41,12 @@ const Menu = () => {
     };
   }, []);
 
+  const { clima, obtenerClima } = useClimaStore();
+
+  useEffect(() => {
+    obtenerClima();
+  }, []);
+
   return (
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-500 ease-in-out
@@ -50,7 +57,7 @@ const Menu = () => {
         }
       `}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-2 py-4">
         {/* Logo */}
         <a href="#home">
           <img
@@ -70,7 +77,7 @@ const Menu = () => {
         </div>
 
         {/* Links de navegación para pantallas grandes */}
-        <nav className="hidden lg:flex space-x-6">
+        <nav className="hidden lg:flex space-x-6 items-center">
           <a
             href="#sobremi"
             className="text-white hover:text-yellow-400 transition font-medium"
@@ -107,6 +114,23 @@ const Menu = () => {
           >
             Proyectos
           </a>
+          {/* Info del clima */}
+          {clima && (
+            <div className="hidden lg:flex items-center gap-3 text-white bg-[#1b4f72]/90 px-4 py-1.5 rounded-full shadow-md backdrop-blur-sm border border-white/20">
+              <img
+                src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
+                alt={clima.weather[0].description}
+                className="w-7 h-7"
+              />
+              <div className="flex flex-col text-left">
+                <span className="text-sm font-semibold">
+                  {Math.round(clima.main.temp)}°C -{" "}
+                  {clima.weather[0].description}
+                </span>
+                <span className="text-xs text-white/70">{clima.name}</span>
+              </div>
+            </div>
+          )}
         </nav>
       </div>
 
@@ -173,6 +197,22 @@ const Menu = () => {
             </a>
           </li>
         </ul>
+        {/* Clima en móviles */}
+        {clima && (
+          <div className="flex lg:hidden justify-center items-center gap-3 text-white bg-[#1b4f72]/90 py-2 rounded-xl shadow-md mx-14 md:mx-48  mb-4 mt-2 backdrop-blur-sm border border-white/20">
+            <img
+              src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
+              alt={clima.weather[0].description}
+              className="w-7 h-7"
+            />
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold">
+                {Math.round(clima.main.temp)}°C - {clima.weather[0].description}
+              </span>
+              <span className="text-xs text-white/70">{clima.name}</span>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

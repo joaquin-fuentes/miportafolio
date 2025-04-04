@@ -1,11 +1,10 @@
-import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { IoMdMail } from "react-icons/io";
 import { RiContactsFill } from "react-icons/ri";
 import { IoIosText } from "react-icons/io";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const FormularioContacto = () => {
@@ -16,6 +15,10 @@ const FormularioContacto = () => {
     formState: { errors },
   } = useForm();
 
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const onSubmit = (data) => {
     const templateParams = {
       user_name: data.name,
@@ -24,27 +27,27 @@ const FormularioContacto = () => {
       to_name: "Joaquin",
     };
 
-    emailjs
-      .send(
-        "service_5l0vwj7",
-        "template_iwqfcfa",
-        templateParams,
-        "XPpSHMv-oAPxczGrr"
-      )
-      .then(
-        (response) => {
-          Swal.fire(
-            "Enviado!",
-            "Su mensaje fue enviado correctamente",
-            "success"
-          );
-          reset(); // Resetea el formulario después de enviarlo
-        },
-        (err) => {
-          Swal.fire("Error!", "No se pudo procesar su petición", "error");
-        }
-      );
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
+      (response) => {
+        Swal.fire(
+          "Enviado!",
+          "Su mensaje fue enviado correctamente",
+          "success"
+        );
+        reset(); // Resetea el formulario después de enviarlo
+      },
+      (err) => {
+        Swal.fire("Error!", "No se pudo procesar su petición", "error");
+      }
+    );
   };
+  if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+    return Swal.fire(
+      "Error!",
+      "Faltan claves de configuración de EmailJS",
+      "error"
+    );
+  }
 
   return (
     <div className="bg-[#023047] text-white flex flex-col items-center justify-center pt-12 px-6">
