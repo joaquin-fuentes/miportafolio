@@ -202,12 +202,6 @@ export default function Laberinto() {
                 <span className="text-green-400">verde</span> hasta la zona{" "}
                 <span className="text-red-400">roja</span>.
               </p>
-              <button
-                onClick={handleStart}
-                className="px-6 py-2 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-600 transition"
-              >
-                Comenzar
-              </button>
             </div>
           </div>
         )}
