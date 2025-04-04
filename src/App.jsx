@@ -10,6 +10,7 @@ import Contacto from "./components/views/Contacto";
 import Educacion from "./components/views/Educacion";
 import Proyectos from "./components/views/Proyectos";
 import FormularioContacto from "./components/views/FormularioContacto";
+import Laberinto from "./components/views/Laberinto";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
           {/* Proyectos */}
           <Proyectos />
 
+          <div className="hidden lg:block">
+            {/* Laberinto */}
+            <Laberinto />
+          </div>
           {/* Formulario de Contacto */}
           <FormularioContacto />
         </div>
