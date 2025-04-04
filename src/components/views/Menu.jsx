@@ -121,7 +121,7 @@ const Menu = () => {
             </div>
           ) : (
             clima?.weather && (
-              <div className="hidden lg:flex items-center gap-3 text-white bg-[#1b4f72]/90 px-4 py-1.5 rounded-full shadow-md backdrop-blur-sm border border-white/20">
+              <div className="hidden lg:flex items-center gap-3 text-white bg-[#1b4f72]/30 px-4 py-1.5 rounded-full shadow-md backdrop-blur-sm border border-white/20">
                 <img
                   src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
                   alt={clima.weather[0].description}
