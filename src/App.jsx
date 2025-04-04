@@ -10,7 +10,8 @@ import Contacto from "./components/views/Contacto";
 import Educacion from "./components/views/Educacion";
 import Proyectos from "./components/views/Proyectos";
 import FormularioContacto from "./components/views/FormularioContacto";
-import Laberinto from "./components/views/Laberinto";
+import Laberinto from "./components/views/juegos/Laberinto";
+import Cartas from "./components/views/juegos/Cartas";
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
             {/* Laberinto */}
             <Laberinto />
           </div>
+          {/* Cartas */}
+          <Cartas />
           {/* Formulario de Contacto */}
           <FormularioContacto />
         </div>
