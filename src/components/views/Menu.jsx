@@ -41,7 +41,7 @@ const Menu = () => {
     };
   }, []);
 
-  const { clima, obtenerClima } = useClimaStore();
+  const { clima, loading, obtenerClima } = useClimaStore();
 
   useEffect(() => {
     obtenerClima();
@@ -114,22 +114,29 @@ const Menu = () => {
           >
             Proyectos
           </a>
-          {/* Info del clima */}
-          {clima && (
-            <div className="hidden lg:flex items-center gap-3 text-white bg-[#1b4f72]/90 px-4 py-1.5 rounded-full shadow-md backdrop-blur-sm border border-white/20">
-              <img
-                src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
-                alt={clima.weather[0].description}
-                className="w-7 h-7"
-              />
-              <div className="flex flex-col text-left">
-                <span className="text-sm font-semibold">
-                  {Math.round(clima.main.temp)}°C -{" "}
-                  {clima.weather[0].description}
-                </span>
-                <span className="text-xs text-white/70">{clima.name}</span>
-              </div>
+          {/* Info del clima - Desktop */}
+          {loading ? (
+            <div className="hidden lg:flex items-center justify-center px-4 py-1.5 rounded-full">
+              <div className="w-6 h-6 border-2 border-t-transparent border-white rounded-full animate-spin" />
             </div>
+          ) : (
+            clima?.weather && (
+              <div className="hidden lg:flex items-center gap-3 text-white bg-[#1b4f72]/90 px-4 py-1.5 rounded-full shadow-md backdrop-blur-sm border border-white/20">
+                <img
+                  src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
+                  alt={clima.weather[0].description}
+                  className="w-7 h-7"
+                />
+                <div className="flex flex-col text-left">
+                  <span className="text-sm font-semibold">
+                    {Math.round(clima.main.temp)}°C -{" "}
+                    {clima.weather[0].description.charAt(0).toUpperCase() +
+                      clima.weather[0].description.slice(1)}
+                  </span>
+                  <span className="text-xs text-white/70">{clima.name}</span>
+                </div>
+              </div>
+            )
           )}
         </nav>
       </div>
@@ -197,21 +204,29 @@ const Menu = () => {
             </a>
           </li>
         </ul>
-        {/* Clima en móviles */}
-        {clima && (
-          <div className="flex lg:hidden justify-center items-center gap-3 text-white bg-[#1b4f72]/90 py-2 rounded-xl shadow-md mx-14 md:mx-48  mb-4 mt-2 backdrop-blur-sm border border-white/20">
-            <img
-              src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
-              alt={clima.weather[0].description}
-              className="w-7 h-7"
-            />
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold">
-                {Math.round(clima.main.temp)}°C - {clima.weather[0].description}
-              </span>
-              <span className="text-xs text-white/70">{clima.name}</span>
-            </div>
+        {/* Clima - Mobile */}
+        {loading ? (
+          <div className="flex justify-center items-center py-2 rounded-xl mx-14 md:mx-48 mb-4 mt-2">
+            <div className="w-6 h-6 border-2 border-t-transparent border-white rounded-full animate-spin" />
           </div>
+        ) : (
+          clima?.weather && (
+            <div className="flex justify-center items-center gap-3 text-white bg-[#1b4f72]/90 py-2 rounded-xl shadow-md mx-14 md:mx-48 mb-4 mt-2 backdrop-blur-sm border border-white/20">
+              <img
+                src={`https://openweathermap.org/img/wn/${clima.weather[0].icon}.png`}
+                alt={clima.weather[0].description}
+                className="w-7 h-7"
+              />
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold">
+                  {Math.round(clima.main.temp)}°C -{" "}
+                  {clima.weather[0].description.charAt(0).toUpperCase() +
+                    clima.weather[0].description.slice(1)}
+                </span>
+                <span className="text-xs text-white/70">{clima.name}</span>
+              </div>
+            </div>
+          )
         )}
       </nav>
     </header>
