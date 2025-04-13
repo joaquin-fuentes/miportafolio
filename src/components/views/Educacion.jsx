@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal"; 
+import { useState } from "react";
+import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
 
 const Educacion = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -16,47 +16,57 @@ const Educacion = () => {
         Educación
       </h2>
 
-      <div className="space-y-6">
-        <div data-aos="fade-up">
+      <div className="space-y-8">
+        {/* UTN */}
+        <div data-aos="fade-up" className="space-y-2">
           <h4 className="text-2xl font-semibold">
-            Universidad Tecnológica Nacional-FRT
+            Universidad Tecnológica Nacional - FRT
           </h4>
-          <h6 className="text-lg">Tecnicatura Universitaria en Programación</h6>
+          <h6 className="text-lg text-gray-300">
+            Tecnicatura Universitaria en Programación
+          </h6>
         </div>
 
-        <div data-aos="fade-up">
+        {/* RollingCode */}
+        <div data-aos="fade-up" className="space-y-2">
           <h4 className="text-2xl font-semibold">RollingCode</h4>
-          <h6 className="text-lg">Curso de Programación Web FullStack</h6>
-          <h6 className="text-lg">Curso de React Avanzado</h6>
+          <ul className="text-lg text-gray-300 space-y-1">
+            <li>Curso de Programación Web FullStack</li>
+            <li>Curso de React Avanzado</li>
+          </ul>
         </div>
 
-        <div data-aos="fade-up">
+        {/* Udemy */}
+        <div data-aos="fade-up" className="space-y-2">
           <h4 className="text-2xl font-semibold">Udemy</h4>
-          <h6 className="text-lg">Curso de SQL desde cero</h6>
-          <h6 className="text-lg">Curso de Node JS</h6>
-          <h6 className="text-lg">Curso de REACT Js</h6>
-          <h6 className="text-lg">Curso de Next Js</h6>
-
+          <ul className="text-lg text-gray-300 space-y-1">
+            <li>Curso de SQL desde cero</li>
+            <li>Curso de Node JS</li>
+            <li>Curso de React JS</li>
+            <li>Curso de Next JS</li>
+          </ul>
         </div>
 
-        <div data-aos="fade-up">
+        {/* Platzi */}
+        <div data-aos="fade-up" className="space-y-2">
           <h4 className="text-2xl font-semibold">Platzi</h4>
-          <h6 className="text-lg">Curso de Desarrollo Web Front-end</h6>
+          <ul className="text-lg text-gray-300 space-y-1">
+            <li>Curso de Desarrollo Web Front-end</li>
+          </ul>
         </div>
       </div>
 
       <button
         data-aos="fade-up"
-        className="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md hover:bg-yellow-600 transition my-6"
-        onClick={() => setModalShow(true)} // Abrimos el modal al hacer clic en el botón
+        className="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md hover:bg-yellow-600 transition my-8"
+        onClick={() => setModalShow(true)}
       >
         Certificados
       </button>
 
-      {/* Modal */}
       <MyVerticallyCenteredModal
         show={modalShow}
-        onHide={() => setModalShow(false)} // Cerramos el modal
+        onHide={() => setModalShow(false)}
       />
     </section>
   );

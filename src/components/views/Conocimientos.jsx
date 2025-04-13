@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -17,115 +16,157 @@ import {
   SiJira,
   SiPostman,
   SiSwagger,
+  SiNestjs,
 } from "react-icons/si";
 import { GiBearFace } from "react-icons/gi";
-import { TbApi } from "react-icons/tb";
 import { BsTrello } from "react-icons/bs";
 
 const conocimientos = [
-  { id: 1, name: "HTML", icon: <FaHtml5 className="text-6xl text-red-500" /> },
+  // frontend
+  {
+    id: 1,
+    name: "HTML",
+    icon: <FaHtml5 className="text-5xl text-red-500" />,
+    group: "Frontend",
+  },
   {
     id: 2,
     name: "CSS",
-    icon: <FaCss3Alt className="text-6xl text-blue-500" />,
+    icon: <FaCss3Alt className="text-5xl text-blue-500" />,
+    group: "Frontend",
   },
   {
     id: 3,
     name: "JavaScript",
-    icon: <DiJavascript className="text-6xl text-yellow-400" />,
+    icon: <DiJavascript className="text-5xl text-yellow-400" />,
+    group: "Frontend",
   },
   {
     id: 4,
     name: "TypeScript",
-    icon: <SiTypescript className="text-6xl text-blue-600" />,
+    icon: <SiTypescript className="text-5xl text-blue-600" />,
+    group: "Frontend",
   },
   {
     id: 5,
     name: "React",
-    icon: <FaReact className="text-6xl text-cyan-400" />,
+    icon: <FaReact className="text-5xl text-cyan-400" />,
+    group: "Frontend",
   },
   {
     id: 6,
-    name: "Next.js",
-    icon: <SiNextdotjs className="text-6xl text-black" />,
+    name: "NextJS",
+    icon: <SiNextdotjs className="text-5xl text-black" />,
+    group: "Frontend",
   },
   {
     id: 7,
     name: "Redux",
-    icon: <SiRedux className="text-6xl text-purple-500" />,
+    icon: <SiRedux className="text-5xl text-purple-500" />,
+    group: "Frontend",
   },
   {
     id: 8,
     name: "Zustand",
-    icon: <GiBearFace className="text-6xl text-orange-500" />,
-  },
-  {
-    id: 9,
-    name: "Node.js",
-    icon: <FaNodeJs className="text-6xl text-green-600" />,
-  },
-  {
-    id: 10,
-    name: "Express.js",
-    icon: <FaNodeJs className="text-6xl text-gray-600" />,
-  },
-  {
-    id: 11,
-    name: "MySQL",
-    icon: <DiMysql className="text-6xl text-blue-700" />,
-  },
-  {
-    id: 12,
-    name: "MongoDB",
-    icon: <DiMongodb className="text-6xl text-green-600" />,
-  },
-  {
-    id: 19,
-    name: "Git",
-    icon: <FaGitAlt className="text-6xl text-orange-600" />,
-  },
-  {
-    id: 13,
-    name: "GitHub",
-    icon: <FaGithub className="text-6xl text-gray-800" />,
+    icon: <GiBearFace className="text-5xl text-orange-500" />,
+    group: "Frontend",
   },
   {
     id: 14,
     name: "Bootstrap",
-    icon: <FaBootstrap className="text-6xl text-purple-700" />,
+    icon: <FaBootstrap className="text-5xl text-purple-700" />,
+    group: "Frontend",
   },
   {
     id: 15,
     name: "Tailwind CSS",
-    icon: <SiTailwindcss className="text-6xl text-cyan-500" />,
+    icon: <SiTailwindcss className="text-5xl text-cyan-500" />,
+    group: "Frontend",
+  },
+
+  // backend
+  {
+    id: 9,
+    name: "NodeJS",
+    icon: <FaNodeJs className="text-5xl text-green-600" />,
+    group: "Backend",
+  },
+  {
+    id: 10,
+    name: "ExpressJS",
+    icon: <FaNodeJs className="text-5xl text-gray-600" />,
+    group: "Backend",
+  },
+  {
+    id: 22,
+    name: "NestJS",
+    icon: <SiNestjs className="text-5xl text-red-600" />,
+    group: "Backend",
+  },
+  {
+    id: 11,
+    name: "MySQL",
+    icon: <DiMysql className="text-5xl text-blue-700" />,
+    group: "Base de datos",
+  },
+  {
+    id: 12,
+    name: "MongoDB",
+    icon: <DiMongodb className="text-5xl text-green-600" />,
+    group: "Base de datos",
+  },
+
+  // herramientas
+  {
+    id: 13,
+    name: "GitHub",
+    icon: <FaGithub className="text-5xl text-gray-300 " />,
+    group: "Herramientas",
+  },
+  {
+    id: 19,
+    name: "Git",
+    icon: <FaGitAlt className="text-5xl text-orange-600" />,
+    group: "Herramientas",
   },
   {
     id: 16,
     name: "Scrum",
-    icon: <DiScrum className="text-6xl text-blue-400" />,
+    icon: <DiScrum className="text-5xl text-blue-400" />,
+    group: "Metodologías",
   },
   {
     id: 17,
     name: "Postman",
-    icon: <SiPostman className="text-6xl text-orange-500" />,
+    icon: <SiPostman className="text-5xl text-orange-500" />,
+    group: "Herramientas",
   },
-  // {
-  //   id: 18,
-  //   name: "Swagger",
-  //   icon: <SiSwagger className="text-6xl text-green-500" />,
-  // },
-
+  {
+    id: 18,
+    name: "Swagger",
+    icon: <SiSwagger className="text-5xl text-green-500" />,
+    group: "Herramientas",
+  },
   {
     id: 20,
     name: "Trello",
-    icon: <BsTrello className="text-6xl text-blue-500" />,
+    icon: <BsTrello className="text-5xl text-blue-500" />,
+    group: "Herramientas",
   },
-  { id: 21, name: "Jira", icon: <SiJira className="text-6xl text-blue-700" /> },
+  {
+    id: 21,
+    name: "Jira",
+    icon: <SiJira className="text-5xl text-blue-700" />,
+    group: "Herramientas",
+  },
 ];
 
 const Conocimientos = () => {
   return (
-    <section className="scroll-mt-20 py-12 bg-[#023047] text-white" id="conocimientos">
+    <section
+      className="scroll-mt-20 py-12 bg-[#023047] text-white"
+      id="conocimientos"
+    >
       <div className="flex justify-center text-center ">
         <h2
           data-aos="fade-up"
@@ -143,10 +184,11 @@ const Conocimientos = () => {
             data-aos="fade-up"
             className="flex flex-col items-center justify-center w-1/3  md:w-1/5"
           >
-            <div className="hover:scale-110 transition-transform duration-200">
+            <div className="hover:scale-125 transition-transform duration-200">
               {item.icon}
             </div>
             <h4 className="mt-2 text-lg text-center">{item.name}</h4>
+            <p className="text-xs text-gray-400">{item.group}</p>
           </div>
         ))}
       </div>

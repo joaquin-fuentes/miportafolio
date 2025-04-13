@@ -12,6 +12,7 @@ import Proyectos from "./components/views/Proyectos";
 import FormularioContacto from "./components/views/FormularioContacto";
 import Laberinto from "./components/views/juegos/Laberinto";
 import Cartas from "./components/views/juegos/Cartas";
+import WhatsappButton from "./components/WhatsappButton";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
           <FormularioContacto />
         </div>
       </div>
+      <WhatsappButton />
       <Footer />
     </>
   );

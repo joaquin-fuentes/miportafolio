@@ -1,8 +1,7 @@
-import React from "react";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
-const url = `https://api.whatsapp.com/send?phone=${3816097754}&text=${encodeURIComponent(
+const url = `https://api.whatsapp.com/send?phone=3816097754&text=${encodeURIComponent(
   "Hola Joaquin!"
 )}`;
 
@@ -14,10 +13,16 @@ const Contacto = () => {
     >
       <h2
         data-aos="fade-up"
-        className="text-4xl font-bold mb-8 relative inline-block after:content-[''] after:block after:h-1 after:w-16 after:bg-yellow-500 after:mt-2 mx-auto"
+        className="text-4xl font-bold mb-6 relative inline-block after:content-[''] after:block after:h-1 after:w-16 after:bg-yellow-500 after:mt-2 mx-auto"
       >
         Contacto
       </h2>
+
+      {/* Texto introductorio */}
+      <p className="text-gray-300 mb-8 max-w-xl mx-auto" data-aos="fade-up">
+        ¿Querés ponerte en contacto conmigo? <br /> Te dejo mis redes y formas
+        directas para que podamos hablar.
+      </p>
 
       <div className="flex flex-col items-center space-y-6 md:space-y-12">
         {/* WhatsApp */}
@@ -28,18 +33,19 @@ const Contacto = () => {
           rel="noopener noreferrer"
           className="flex items-center text-lg font-semibold hover:text-yellow-400 transition-colors"
         >
-          <FaWhatsapp className="text-3xl text-green-500 mr-3" />
+          <FaWhatsapp className="text-2xl sm:text-3xl text-green-500 mr-3 animate-pulse" />
           381-6097754
         </a>
 
         {/* Email */}
-        <div
+        <a
           data-aos="fade-up"
-          className="flex items-center text-lg font-semibold"
+          href="mailto:joaquin.fuentes1327@gmail.com"
+          className="flex items-center text-lg font-semibold hover:text-yellow-400 transition-colors"
         >
-          <FiMail className="text-3xl text-yellow-400 mr-3" />
-          JOAQUIN.FUENTES1327@GMAIL.COM
-        </div>
+          <FiMail className="text-2xl sm:text-3xl text-yellow-400 mr-3" />
+          joaquin.fuentes1327@gmail.com
+        </a>
 
         {/* LinkedIn */}
         <a
@@ -49,7 +55,7 @@ const Contacto = () => {
           rel="noopener noreferrer"
           className="flex items-center text-lg font-semibold hover:text-yellow-400 transition-colors"
         >
-          <FaLinkedin className="text-3xl text-blue-600 mr-3" />
+          <FaLinkedin className="text-2xl sm:text-3xl text-blue-600 mr-3" />
           Perfil de LinkedIn
         </a>
 
@@ -61,7 +67,7 @@ const Contacto = () => {
           rel="noopener noreferrer"
           className="flex items-center text-lg font-semibold hover:text-yellow-400 transition-colors"
         >
-          <FaGithub className="text-3xl text-gray-800 mr-3" />
+          <FaGithub className="text-2xl sm:text-3xl text-gray-300 mr-3" />
           Perfil de GitHub
         </a>
       </div>
