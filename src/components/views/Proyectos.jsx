@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import portadaPortafolio from "../../assets/imgPortadaPortafolio.png";
 import portadaTKC from "../../assets/portadatkc.png";
 import portadaLJ from "../../assets/portadalj.png";
+import portadaRopaDeportiva from "../../assets/portadaRopaDeportiva.png";
 import portadaBonDia from "../../assets/portadaproyectogrupal.png";
 import portadaCopaAmerica from "../../assets/portadaCopaAmerica.png";
 import portadaHospedajes from "../../assets/portadaHospedajes.png";
@@ -47,6 +48,15 @@ const proyectosData = [
     descripcion:
       "Página web con hospedajes verificados para mayor seguridad de las personas.",
     etiqueta: "Reactjs / Tailwind / Nodejs / Mongodb",
+  },
+  {
+    titulo: "Ropa Deportiva",
+    imagen: portadaRopaDeportiva,
+    tipo: "propio",
+    githubUrl: "https://github.com/joaquin-fuentes/ropa-deportiva",
+    demoUrl: "https://ropa-deportiva.vercel.app",
+    descripcion: "Página web de venta de ropa deportiva (en construccion).",
+    etiqueta: "Next / Tailwind",
   },
   {
     titulo: "LJ Indumentaria",
