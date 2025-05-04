@@ -17,6 +17,9 @@ import {
   SiPostman,
   SiSwagger,
   SiNestjs,
+  SiPrisma,
+  SiPostgresql,
+  SiFirebase,
 } from "react-icons/si";
 import { GiBearFace } from "react-icons/gi";
 import { BsTrello } from "react-icons/bs";
@@ -78,6 +81,12 @@ const conocimientos = [
     group: "Frontend",
   },
   {
+    id: 26,
+    name: "ShadCN UI",
+    icon: <FaReact className="text-5xl text-rose-400" />,
+    group: "Frontend",
+  },
+  {
     id: 15,
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-5xl text-cyan-500" />,
@@ -102,6 +111,24 @@ const conocimientos = [
     name: "NestJS",
     icon: <SiNestjs className="text-5xl text-red-600" />,
     group: "Backend",
+  },
+  {
+    id: 23,
+    name: "Prisma",
+    icon: <SiPrisma className="text-5xl text-indigo-500" />,
+    group: "Base de datos",
+  },
+  {
+    id: 24,
+    name: "PostgreSQL",
+    icon: <SiPostgresql className="text-5xl text-blue-800" />,
+    group: "Base de datos",
+  },
+  {
+    id: 25,
+    name: "Firebase",
+    icon: <SiFirebase className="text-5xl text-yellow-400" />,
+    group: "Base de datos",
   },
   {
     id: 11,
