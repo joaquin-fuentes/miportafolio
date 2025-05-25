@@ -23,6 +23,7 @@ import {
 } from "react-icons/si";
 import { GiBearFace } from "react-icons/gi";
 import { BsTrello } from "react-icons/bs";
+import { CarouselStack } from "./CarouselStack";
 
 const conocimientos = [
   // frontend
@@ -189,6 +190,9 @@ const conocimientos = [
 ];
 
 const Conocimientos = () => {
+  const mitad = Math.ceil(conocimientos.length / 2);
+  const fila1 = conocimientos.slice(0, mitad);
+  const fila2 = conocimientos.slice(mitad);
   return (
     <section
       className="scroll-mt-20 py-12 bg-[#023047] text-white"
@@ -203,21 +207,9 @@ const Conocimientos = () => {
         </h2>
       </div>
 
-      {/* Flexbox layout */}
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-y-8 px-4">
-        {conocimientos.map((item) => (
-          <div
-            key={item.id}
-            data-aos="fade-up"
-            className="flex flex-col items-center justify-center w-1/3  md:w-1/5"
-          >
-            <div className="hover:scale-125 transition-transform duration-200">
-              {item.icon}
-            </div>
-            <h4 className="mt-2 text-lg text-center">{item.name}</h4>
-            <p className="text-xs text-gray-400">{item.group}</p>
-          </div>
-        ))}
+      <div className="space-y-10 px-4 md:px-24" data-aos="fade-up">
+        <CarouselStack items={fila1} reverse={false} />
+        <CarouselStack items={fila2} reverse={true} />
       </div>
     </section>
   );

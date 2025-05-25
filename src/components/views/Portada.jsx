@@ -8,6 +8,7 @@ const Portada = () => {
       className="bg-cover bg-center bg-no-repeat text-white min-h-screen flex items-center justify-center pt-8 md:pt-0"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(${imgFondo})`,
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
