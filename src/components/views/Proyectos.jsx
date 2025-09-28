@@ -16,6 +16,8 @@ import portadaRollingCode from "../../assets/portadaRollingCode.png";
 import portadaRollingCodeKids from "../../assets/portadaRollingCodeKids.png";
 import portadaStudio from "../../assets/portadaStudio.png";
 import portadaUnaje from "../../assets/portadaUnaje.png";
+import portadaCosifind from "../../assets/portadaCosifind2.png";
+import portadaLoDeAlicia from "../../assets/portadaLoDeAlicia.png";
 
 // Definimos el array con la información de cada proyecto
 const proyectosData = [
@@ -124,6 +126,26 @@ const proyectosData = [
     descripcion:
       "Sitio web para un restaurante, desarrollado como proyecto grupal.",
     etiqueta: "Reactjs / Bootstrap / Nodejs / Mongodb",
+  },
+  {
+    titulo: "CosiFind",
+    imagen: portadaCosifind,
+    tipo: "colaborativo",
+    githubUrl: "",
+    demoUrl: "https://cosifind.com/",
+    descripcion:
+      "Plataforma que permite publicar productos y encontrar lo que está cerca de tu domicilio.",
+    etiqueta: "Next.js / PostgreSQL / Prisma / Firebase / React Native",
+  },
+  {
+    titulo: "Lo de Alicia",
+    imagen: portadaLoDeAlicia,
+    tipo: "propio",
+    githubUrl: "",
+    demoUrl: "https://lodealicia.vercel.app/",
+    descripcion:
+      "Sitio web para un hospedaje en El Cadillal, con secciones de galería, detalles y contacto para reservas.",
+    etiqueta: "Next.js / TailwindCSS",
   },
 ];
 

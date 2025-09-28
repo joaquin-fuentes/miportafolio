@@ -37,17 +37,17 @@ const Trabajo = () => {
               Ene. 2025 – Actualidad · Híbrido
             </p>
             <p className="text-base mt-1 text-gray-300">
-              Desarrollo de funcionalidades con React, Next.js, Node.js y
-              MongoDB. Participación en análisis técnico, optimización de
-              rendimiento y trabajo en equipo bajo metodologías ágiles.
+              Desarrollo de funcionalidades con React, Next.js, Node.js, MongoDB
+              y PostgreSQL utilizando Prisma como ORM. Integración de APIs REST
+              y documentación con Swagger. Participación en análisis funcionales
+              y coordinación de equipos bajo Scrum, asumiendo roles de Scrum
+              Master y Líder Técnico.
             </p>
           </div>
 
           {/* Mentor / Tutor */}
           <div>
-            <h6 className="text-lg font-semibold">
-              Mentor / Tutor en curso Fullstack
-            </h6>
+            <h6 className="text-lg font-semibold">Mentor en curso Fullstack</h6>
             <p className="text-sm text-gray-300 italic">
               Abr. 2024 – Actualidad · Presencial
             </p>

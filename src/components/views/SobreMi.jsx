@@ -1,5 +1,5 @@
 import { useState } from "react";
-import imgCV from "../../assets/JoaquinFuentes-CV.png";
+import imgCV from "../../assets/JoaquinFuentes-CV3.png";
 
 // eslint-disable-next-line react/prop-types
 function MyVerticallyCenteredModal({ show, onHide }) {
