@@ -34,12 +34,16 @@ export const CarouselStack = ({ items, reverse = false }) => {
     >
       {items.map((item, index) => (
         <SwiperSlide key={index} className="text-center">
-          <div className="flex flex-col items-center">
-            <div className="hover:scale-125 transition-transform duration-200">
+          <div className="flex flex-col items-center group">
+            <div className="hover:scale-125 transition-all duration-300 group-hover:rotate-12 group-hover:drop-shadow-lg">
               {item.icon}
             </div>
-            <h4 className="mt-2 text-lg">{item.name}</h4>
-            <p className="text-xs text-gray-400">{item.group}</p>
+            <h4 className="mt-2 text-lg group-hover:text-yellow-400 transition-colors duration-300">
+              {item.name}
+            </h4>
+            <p className="text-xs text-gray-400 group-hover:text-white transition-colors duration-300">
+              {item.group}
+            </p>
           </div>
         </SwiperSlide>
       ))}
