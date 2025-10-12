@@ -171,14 +171,15 @@ const ProyectosSection = ({ titulo, proyectos }) => (
     >
       {proyectos.map((proyecto, index) => (
         <SwiperSlide key={index} className="h-full flex rounded-xl">
-          <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col min-h-[350px]">
+          <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 flex flex-col min-h-[350px] group">
             <div className="relative">
               <img
                 src={proyecto.imagen}
                 alt={proyecto.titulo}
-                className="w-full h-40 object-cover"
+                className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-4 left-4 opacity-90">
                 {proyecto.etiqueta && (
                   <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">
@@ -200,7 +201,7 @@ const ProyectosSection = ({ titulo, proyectos }) => (
                     href={proyecto.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-yellow-400 border border-yellow-400 hover:border-yellow-300 hover:text-yellow-300 px-4 py-2 rounded-lg transition-all shadow-lg text-sm"
+                    className="text-yellow-400 border border-yellow-400 hover:border-yellow-300 hover:text-yellow-300 px-4 py-2 rounded-lg transition-all shadow-lg text-sm hover:shadow-yellow-400/50 hover:scale-105"
                   >
                     Ver en Github
                   </a>
@@ -209,7 +210,7 @@ const ProyectosSection = ({ titulo, proyectos }) => (
                   href={proyecto.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-yellow-400 hover:bg-yellow-300 text-black px-4 py-2 rounded-lg transition-all shadow-lg text-sm"
+                  className="bg-gradient-to-r from-yellow-400 to-yellow-300 hover:from-yellow-300 hover:to-yellow-200 text-black px-4 py-2 rounded-lg transition-all shadow-lg text-sm hover:shadow-yellow-400/50 hover:scale-105 font-semibold"
                 >
                   Ver Página Web
                 </a>

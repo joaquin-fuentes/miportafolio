@@ -23,7 +23,7 @@ function MyVerticallyCenteredModal({ show, onHide }) {
       >
         {/* Botón de cerrar */}
         <button
-          className="absolute top-3 right-3 text-white hover:text-yellow-500 bg-transparent rounded-full p-2 focus:outline-none"
+          className="absolute top-3 right-3 text-white hover:text-yellow-400 bg-transparent rounded-full p-2 focus:outline-none transition-all duration-300 hover:bg-white/10 hover:scale-110"
           onClick={onHide}
         >
           <AiOutlineClose size={24} />
