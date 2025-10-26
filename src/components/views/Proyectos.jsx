@@ -36,7 +36,7 @@ const proyectosData = [
     imagen: portadaTKC,
     tipo: "propio",
     githubUrl: "https://github.com/joaquin-fuentes/TKC-Front",
-    demoUrl: "https://tucumankayakclub.netlify.app",
+    demoUrl: "https://tucumankayakclub.vercel.app/",
     descripcion:
       "Landing page para una empresa de turismo aventura con toda la información necesaria.",
     etiqueta: "Reactjs / Tailwind / Nodejs / Mongodb",
