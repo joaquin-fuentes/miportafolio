@@ -80,39 +80,45 @@ const Menu = () => {
         <nav className="hidden lg:flex space-x-6 items-center">
           <a
             href="#sobremi"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="text-white hover:text-yellow-400 transition-all duration-300 font-medium relative group"
           >
             Sobre mí
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="#experiencia"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="text-white hover:text-yellow-400 transition-all duration-300 font-medium relative group"
           >
             Experiencia
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="#conocimientos"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="text-white hover:text-yellow-400 transition-all duration-300 font-medium relative group"
           >
             Stack Tecnológico
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="#contacto"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="text-white hover:text-yellow-400 transition-all duration-300 font-medium relative group"
           >
             Contacto
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="#educacion"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="text-white hover:text-yellow-400 transition-all duration-300 font-medium relative group"
           >
             Educación
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
             href="#proyectos"
-            className="text-white hover:text-yellow-400 transition font-medium"
+            className="text-white hover:text-yellow-400 transition-all duration-300 font-medium relative group"
           >
             Proyectos
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
           {/* Info del clima - Desktop */}
           {loading ? (

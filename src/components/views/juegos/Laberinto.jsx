@@ -210,9 +210,12 @@ export default function Laberinto() {
       {/* Botón */}
       <button
         onClick={handleStart}
-        className="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-600 transition"
+        className="mt-6 relative bg-gradient-to-r from-yellow-400 to-yellow-300 text-black font-semibold px-8 py-3 rounded-lg hover:from-yellow-300 hover:to-yellow-200 transition-all duration-300 shadow-lg hover:shadow-yellow-400/50 hover:scale-105 overflow-hidden group"
       >
-        {gameState ? "Reintentar" : isPlaying ? "Reiniciar" : "Comenzar"}
+        <span className="relative z-10">
+          {gameState ? "Reintentar" : isPlaying ? "Reiniciar" : "Comenzar"}
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
       </button>
 
       {/* Mensajes */}

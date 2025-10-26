@@ -1,5 +1,6 @@
 import imgPerfil from "../../assets/sinfondo.png";
 import imgFondo from "../../assets/fondop1.jpg"; // Carga la imagen de fondo
+import TypingEffect from "../TypingEffect";
 
 const Portada = () => {
   return (
@@ -24,17 +25,30 @@ const Portada = () => {
 
         {/* Texto de la portada */}
         <div className="text-center lg:text-left" data-aos="fade-up">
-          <h1 className="text-3xl lg:text-5xl font-bold mb-4">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-4 gradient-text">
             Joaquín Fuentes
           </h1>
           <h2 className="text-[#8ecae6] text-xl lg:text-3xl font-semibold mb-6">
             Desarrollador Web Full Stack
           </h2>
-          <pre className="text-white py-4 rounded-md max-w-full text-center lg:text-left">
-            <code className="text-xs sm:text-sm lg:text-base break-words">
-              {`const saludar =()=>console.log("Hola Mundo!")\nsaludar()`}
-            </code>
-          </pre>
+          <div className="bg-black/30 backdrop-blur-sm border border-white/20 rounded-lg p-4 w-full text-center lg:text-left overflow-x-auto">
+            <pre className="text-white whitespace-pre-wrap">
+              <code className="text-xs sm:text-sm lg:text-base">
+                <span className="text-blue-400">const</span>{" "}
+                <span className="text-yellow-400">saludar</span> = () =&gt;{" "}
+                <span className="text-green-400">console.log</span>(
+                <span className="text-orange-400">&quot;</span>
+                <TypingEffect
+                  text="Hola Mundo! Soy Joaquín Fuentes, Desarrollador Web Full Stack"
+                  speed={80}
+                  delay={2000}
+                />
+                <span className="text-orange-400">&quot;</span>)
+                <br />
+                <span className="text-blue-400">saludar</span>()
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
     </section>
